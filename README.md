@@ -8,6 +8,7 @@ The port will compile and install [libtensorflow](https://www.tensorflow.org/ins
 ```
 git clone https://github.com/huo-ju/photoprism-freebsd-port
 cd photoprism-freebsd-port
+make config
 make && make install
 ```
 
