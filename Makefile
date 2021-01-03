@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	photoprism
-DISTVERSION=	g20201231
+DISTVERSION=	g20210102
 CATEGORIES=	www
 
 MAINTAINER=	huoju@devep.net
@@ -21,7 +21,7 @@ USES= gmake
 USE_GITHUB=	yes
 GH_ACCOUNT=	photoprism
 GH_PROJECT=	photoprism
-GH_TAGNAME=	8e22fbf8f6bb873eb72988c0def925d402753125
+GH_TAGNAME=	ff758c3ed6b540f4be237166ac0cce2b0f22dcba
 
 USE_RC_SUBR=    photoprism
 PHOTOPRISM_DATA_DIR=      /var/photoprism
