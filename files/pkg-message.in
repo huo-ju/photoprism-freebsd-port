@@ -1,0 +1,10 @@
+[
+{ type: install
+  message: <<EOM
+You must add the following lines to /etc/rc.conf to enable photoprism:
+photoprism_enable="YES"
+photoprism_assetspath="%%PHOTOPRISM_DATA_DIR%%/assets"
+photoprism_storagepath="%%PHOTOPRISM_DATA_DIR%%/storage"
+EOM
+}
+]

@@ -1,0 +1,38 @@
+#!/bin/sh
+
+USER=photoprism
+GROUP=photoprism
+UID=805
+GID=805
+
+if [ "$2" = "PRE-INSTALL" ]; then
+    if /usr/sbin/pw groupshow "${GROUP}" >/dev/null 2>&1; then
+        echo "Using existing group \"${GROUP}\"."
+    else
+        if /usr/sbin/pw groupadd ${GROUP} -g ${GID}; then
+            echo "Added group \"${GROUP}\"."
+        else
+          echo "Adding group \"${GROUP}\" failed..."
+          echo "Please create it, and try again."
+          exit 1
+        fi
+    fi
+
+    if /usr/sbin/pw user show "${USER}" >/dev/null 2>&1; then
+        echo "Using existing user \"${USER}\"."
+    else
+        if /usr/sbin/pw useradd ${USER} -u ${UID} -g ${GROUP} -c "photoprism User" -h - -d /nonexistent -s /usr/sbin/nologin ; then
+            echo "Added user \"${USER}\"."
+        else
+            echo "Adding user \"${USER}\" failed..."
+            echo "Please create it, and try again."
+            exit 1
+        fi
+    fi
+fi
+
+if [ "$2" = "POST-INSTALL" ]; then
+	echo "${USER}:${GROUP} %%PHOTOPRISM_DATA_DIR%%"
+	chown -R ${USER}:${GROUP} %%PHOTOPRISM_DATA_DIR%%
+fi
+

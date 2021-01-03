@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# PROVIDE: photoprism
+# REQUIRE: LOGIN
+
+# You must add the following lines to /etc/rc.conf to enable photoprism:
+# photoprism_enable="YES"
+# photoprism_assetspath="%%PHOTOPRISM_DATA_DIR%%/assets"
+# photoprism_storagepath="%%PHOTOPRISM_DATA_DIR%%/storage"
+# and
+# photoprism_flags="<set as needed>"
+
+. /etc/rc.subr
+
+name="photoprism"
+rcvar=photoprism_enable
+
+load_rc_config $name
+
+: ${photoprism_enable="NO"}
+
+pidfile="/var/run/photoprism.pid"
+procname="/usr/local/bin/photoprism"
+command="/usr/sbin/daemon"
+command_args="-f -T photoprism -p ${pidfile} -u photoprism /usr/local/bin/photoprism --assets-path=${photoprism_assetspath} --storage-path=${photoprism_storagepath} --originals-path=${photoprism_storagepath}/originals --import-path=${photoprism_storagepath}/import ${photoprism_args} start"
+
+run_rc_command "$1"
+
