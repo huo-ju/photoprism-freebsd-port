@@ -46,7 +46,7 @@ pre-build:
 	cd ${WRKSRC} && ${MV} docker _docker
 	cd ${WRKSRC}/_docker/tensorflow && $(MAKE) download
 	@${REINPLACE_CMD} -e 's|0\.26\.1|0\.29\.0|g' ${WRKSRC}/_docker/tensorflow/tensorflow-$(TF_VERSION)/configure.py
-	cd ${WRKSRC}/_docker/tensorflow/tensorflow-${TF_VERSION} && ./configure && bazel build --config=opt //tensorflow:libtensorflow.so ${BAZEL_COPT} && ./create_archive.sh freebsd-cpu ${TF_VERSION}
+	cd ${WRKSRC}/_docker/tensorflow/tensorflow-${TF_VERSION} && ./configure && bazel --output_user_root="${WRKDIR}/.bazel" build --config=opt //tensorflow:libtensorflow.so ${BAZEL_COPT} && ./create_archive.sh freebsd-cpu ${TF_VERSION}
 	@${REINPLACE_CMD} -e 's|	go build -v|	CGO_CFLAGS="-I${WRKSRC}/_docker/tensorflow/tensorflow-$(TF_VERSION)/tmp/include" CGO_LDFLAGS="-L${WRKSRC}/_docker/tensorflow/tensorflow-$(TF_VERSION)/tmp/lib" go build -v|g' ${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e 's|	scripts/build.sh debug|	CGO_CFLAGS="-I${WRKSRC}/_docker/tensorflow/tensorflow-$(TF_VERSION)/tmp/include" CGO_LDFLAGS="-L${WRKSRC}/_docker/tensorflow/tensorflow-$(TF_VERSION)/tmp/lib" scripts/build.sh debug|g' ${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e 's|PHOTOPRISM_VERSION=.*|PHOTOPRISM_VERSION=${GH_TAGNAME}|' ${WRKSRC}/scripts/build.sh
