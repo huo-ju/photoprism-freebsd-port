@@ -43,7 +43,7 @@ post-extract:
 	@${REINPLACE_CMD} -e 's|sha1sum|shasum|g' ${WRKSRC}/scripts/download-nsfw.sh
 
 pre-build:
-	cd ${WRKSRC} && ${MV} docker _docker
+	cd ${WRKSRC} && ${MV} docker _docker || echo Was moved in a previous run.
 	cd ${WRKSRC}/_docker/tensorflow && $(MAKE) download
 	@${REINPLACE_CMD} -e 's|0\.26\.1|0\.29\.0|g' ${WRKSRC}/_docker/tensorflow/tensorflow-$(TF_VERSION)/configure.py
 	cd ${WRKSRC}/_docker/tensorflow/tensorflow-${TF_VERSION} && ./configure && bazel --output_user_root="${WRKDIR}/.bazel" build --config=opt //tensorflow:libtensorflow.so ${BAZEL_COPT} && ./create_archive.sh freebsd-cpu ${TF_VERSION}
