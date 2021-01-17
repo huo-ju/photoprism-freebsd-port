@@ -5,6 +5,11 @@ You must add the following lines to /etc/rc.conf to enable photoprism:
 photoprism_enable="YES"
 photoprism_assetspath="%%PHOTOPRISM_DATA_DIR%%/assets"
 photoprism_storagepath="%%PHOTOPRISM_DATA_DIR%%/storage"
+
+Then set an initial password:
+photoprism --assets-path=%%PHOTOPRISM_DATA_DIR%%/assets --storage-path=%%PHOTOPRISM_DATA_DIR%%/storage --originals-path=%%PHOTOPRISM_DATA_DIR%%/sto
+rage/originals --import-path=%%PHOTOPRISM_DATA_DIR%%/storage/import passwd
+
 EOM
 }
 ]
