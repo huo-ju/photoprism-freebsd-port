@@ -21,6 +21,12 @@ photoprism_assetspath="/var/photoprism/assets"
 photoprism_storagepath="/var/photoprism/storage"
 ```
 
+# Set an initial admin password (fresh install)
+
+```
+photoprism --assets-path=/var/photoprism/assets --storage-path=/var/photoprism/storage --originals-path=/var/photoprism/storage/originals --import-path=/var/photoprism/storage/import passwd
+```
+
 # Run the service
 
 ```
