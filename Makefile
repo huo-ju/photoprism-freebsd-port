@@ -12,7 +12,8 @@ LICENSE=	AGPLv3
 RUN_DEPENDS=  ffmpeg:multimedia/ffmpeg
 BUILD_DEPENDS=  ${RUN_DEPENDS} \
 	bash:shells/bash \
-	go:lang/go\
+	wget:ftp/wget \
+	go:lang/go \
 	python3:lang/python3 \
 	bazel:devel/bazel029
 
@@ -38,12 +39,19 @@ NONE_VARS=	BAZEL_COPT=""
 AVX_VARS=	BAZEL_COPT="--copt=-march=core-avx-i --host_copt=-march=core-avx-i"
 AVX2_VARS=	BAZEL_COPT="--copt=-march=core-avx2 --host_copt=-march=core-avx2"
 
+
+.include <bsd.port.options.mk>
+.if ${OPSYS} == FreeBSD && ${OSVERSION} > 1100000 && ${OSVERSION} < 1200000
+EXTRA_PATCHES=	${PATCHDIR}/patch-docker_tensorflow_tensorflow-1.15.2_tensorflow_core_protobuf_autotuning.proto
+.endif
+
 post-extract:
 	@${REINPLACE_CMD} -e 's|sha1sum|shasum|g' ${WRKSRC}/scripts/download-nasnet.sh
 	@${REINPLACE_CMD} -e 's|sha1sum|shasum|g' ${WRKSRC}/scripts/download-nsfw.sh
+	cd ${WRKSRC}/docker/tensorflow && gmake download
+
 
 pre-build:
-	cd ${WRKSRC}/docker/tensorflow && gmake download
 	@${REINPLACE_CMD} -e 's|0\.26\.1|0\.29\.0|g' ${WRKSRC}/docker/tensorflow/tensorflow-$(TF_VERSION)/configure.py
 	cd ${WRKSRC}/docker/tensorflow/tensorflow-${TF_VERSION} && ./configure && bazel --output_user_root="${WRKDIR}/.bazel" build --config=opt //tensorflow:libtensorflow.so ${BAZEL_COPT} && ./create_archive.sh freebsd-cpu ${TF_VERSION}
 	@${REINPLACE_CMD} -e 's|	go build -v ./...|	CGO_CFLAGS="-I${WRKSRC}/docker/tensorflow/tensorflow-$(TF_VERSION)/tmp/include" CGO_LDFLAGS="-L${WRKSRC}/docker/tensorflow/tensorflow-$(TF_VERSION)/tmp/lib" go build -v ./cmd/... ./internal/... ./pkg/...|g' ${WRKSRC}/Makefile
