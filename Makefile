@@ -42,7 +42,7 @@ AVX2_VARS=	BAZEL_COPT="--copt=-march=core-avx2 --host_copt=-march=core-avx2"
 
 .include <bsd.port.options.mk>
 .if ${OPSYS} == FreeBSD && ${OSVERSION} > 1100000 && ${OSVERSION} < 1200000
-EXTRA_PATCHES=	${PATCHDIR}/patch-docker_tensorflow_tensorflow-1.15.2_tensorflow_core_protobuf_autotuning.proto
+EXTRA_PATCHES=	${PATCHDIR}/extra-patch-docker_tensorflow_tensorflow-1.15.2_tensorflow_core_protobuf_autotuning.proto
 .endif
 
 post-extract:
