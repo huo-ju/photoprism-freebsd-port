@@ -17,14 +17,14 @@ make && make install
 
 ```
 photoprism_enable="YES"
-photoprism_assetspath="/var/photoprism/assets"
-photoprism_storagepath="/var/photoprism/storage"
+photoprism_assetspath="/var/db/photoprism/assets"
+photoprism_storagepath="/var/db/photoprism/storage"
 ```
 
 # Set an initial admin password (fresh install)
 
 ```
-photoprism --assets-path=/var/photoprism/assets --storage-path=/var/photoprism/storage --originals-path=/var/photoprism/storage/originals --import-path=/var/photoprism/storage/import passwd
+photoprism --assets-path=/var/db/photoprism/assets --storage-path=/var/db/photoprism/storage --originals-path=/var/db/photoprism/storage/originals --import-path=/var/db/photoprism/storage/import passwd
 ```
 
 # Run the service

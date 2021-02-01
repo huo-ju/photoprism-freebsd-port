@@ -25,7 +25,7 @@ GH_PROJECT=	photoprism
 GH_TAGNAME=	6b0d94ff42fadccfe88c4d68744b9d3afea36e2f
 
 USE_RC_SUBR=    photoprism
-PHOTOPRISM_DATA_DIR=      /var/photoprism
+PHOTOPRISM_DATA_DIR=      /var/db/photoprism
 SUB_LIST+=      PHOTOPRISM_DATA_DIR=${PHOTOPRISM_DATA_DIR}
 SUB_FILES+=      pkg-install pkg-message
 
