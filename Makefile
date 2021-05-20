@@ -12,11 +12,12 @@ LICENSE=	AGPLv3
 RUN_DEPENDS=  ffmpeg:multimedia/ffmpeg
 EXTRACT_DEPENDS=  ${RUN_DEPENDS} \
 	bash:shells/bash \
-	git:devel/git \
-	wget:ftp/wget \
-	go:lang/go \
 	bazel:devel/bazel029 \
-	gmake:devel/gmake
+	git:devel/git \
+	gmake:devel/gmake \
+	go:lang/go \
+	npm:www/npm-node14 \
+	wget:ftp/wget
 
 USES= gmake python:3.6+,build
 
@@ -55,7 +56,7 @@ pre-build:
 	@${REINPLACE_CMD} -e 's|0\.26\.1|0\.29\.0|g' ${WRKSRC}/docker/tensorflow/tensorflow-$(TF_VERSION)/configure.py
 	@${REINPLACE_CMD} -e "s|'--batch'|\'--batch\', \'--output_user_root=\"${WRKDIR}/.bazel\"\'|" ${WRKSRC}/docker/tensorflow/tensorflow-$(TF_VERSION)/configure.py
 	cd ${WRKSRC}/docker/tensorflow/tensorflow-${TF_VERSION} && ./configure
-	cd ${WRKSRC}/docker/tensorflow/tensorflow-${TF_VERSION} && bazel --output_user_root="${WRKDIR}/.bazel" build --config=opt //tensorflow:libtensorflow.so ${BAZEL_COPT} 
+	cd ${WRKSRC}/docker/tensorflow/tensorflow-${TF_VERSION} && bazel --output_user_root="${WRKDIR}/.bazel" build --config=opt //tensorflow:libtensorflow.so ${BAZEL_COPT}
 	cd ${WRKSRC}/docker/tensorflow/tensorflow-${TF_VERSION} && ./create_archive.sh freebsd-cpu ${TF_VERSION}
 	@${REINPLACE_CMD} -e 's|	go build -v ./...|	CGO_CFLAGS="-I${WRKSRC}/docker/tensorflow/tensorflow-$(TF_VERSION)/tmp/include" CGO_LDFLAGS="-L${WRKSRC}/docker/tensorflow/tensorflow-$(TF_VERSION)/tmp/lib" go build -v ./cmd/... ./internal/... ./pkg/...|g' ${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e 's|	scripts/build.sh debug|	CGO_CFLAGS="-I${WRKSRC}/docker/tensorflow/tensorflow-$(TF_VERSION)/tmp/include" CGO_LDFLAGS="-L${WRKSRC}/docker/tensorflow/tensorflow-$(TF_VERSION)/tmp/lib" scripts/build.sh debug|g' ${WRKSRC}/Makefile
