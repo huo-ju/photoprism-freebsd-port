@@ -34,12 +34,11 @@ TF_VERSION = 1.15.2
 
 OPTIONS_SINGLE=		CPUFEATURE 
 OPTIONS_SINGLE_CPUFEATURE=	NONE AVX AVX2
-OPTIONS_DEFAULT = NONE
-CPUFEATURE_DESC=          Enable tensorflow using features available on your CPU
+OPTIONS_DEFAULT = AVX
+CPUFEATURE_DESC=          Enable AVX CPU extensions for Tensorflow
 NONE_VARS=	BAZEL_COPT=""
 AVX_VARS=	BAZEL_COPT="--copt=-march=core-avx-i --host_copt=-march=core-avx-i"
 AVX2_VARS=	BAZEL_COPT="--copt=-march=core-avx2 --host_copt=-march=core-avx2"
-
 
 .include <bsd.port.options.mk>
 .if ${OPSYS} == FreeBSD && ${OSVERSION} > 1100000 && ${OSVERSION} < 1200000
