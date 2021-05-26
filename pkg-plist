@@ -6,13 +6,6 @@ lib/libtensorflow_framework.so.1.15.2
 /var/db/photoprism/assets/examples/.photoprism/example.jpg
 /var/db/photoprism/assets/examples/.ppignore
 /var/db/photoprism/assets/examples/6720px_white.jpg
-/var/db/photoprism/assets/examples/IMG_4120 (1).JPG
-/var/db/photoprism/assets/examples/IMG_4120 copy.JPG
-/var/db/photoprism/assets/examples/IMG_4120.AAE
-/var/db/photoprism/assets/examples/IMG_4120.JPG
-/var/db/photoprism/assets/examples/IMG_E4120.JPG
-/var/db/photoprism/assets/examples/Random.docx
-/var/db/photoprism/assets/examples/Screenshot 2019-05-21 at 10.45.52.png
 /var/db/photoprism/assets/examples/airport_grey
 /var/db/photoprism/assets/examples/beach_colorfilter.jpg
 /var/db/photoprism/assets/examples/beach_sand.jpg
@@ -46,6 +39,7 @@ lib/libtensorflow_framework.so.1.15.2
 /var/db/photoprism/assets/examples/ephedra_green_lime.jpg
 /var/db/photoprism/assets/examples/example.bmp
 /var/db/photoprism/assets/examples/example.gif
+/var/db/photoprism/assets/examples/example.mp4
 /var/db/photoprism/assets/examples/example.png
 /var/db/photoprism/assets/examples/example.tif
 /var/db/photoprism/assets/examples/fern_green.jpg
@@ -53,6 +47,11 @@ lib/libtensorflow_framework.so.1.15.2
 /var/db/photoprism/assets/examples/fish_anthias_magenta.jpg
 /var/db/photoprism/assets/examples/giraffe_green_brown.jpg
 /var/db/photoprism/assets/examples/gopher-video.mp4
+/var/db/photoprism/assets/examples/IMG_4120 (1).JPG
+/var/db/photoprism/assets/examples/IMG_4120 copy.JPG
+/var/db/photoprism/assets/examples/IMG_4120.AAE
+/var/db/photoprism/assets/examples/IMG_4120.JPG
+/var/db/photoprism/assets/examples/IMG_E4120.JPG
 /var/db/photoprism/assets/examples/instrument_gold.jpg
 /var/db/photoprism/assets/examples/iphone_7.heic
 /var/db/photoprism/assets/examples/iphone_7.json
@@ -68,8 +67,10 @@ lib/libtensorflow_framework.so.1.15.2
 /var/db/photoprism/assets/examples/pineapple_white.jpg
 /var/db/photoprism/assets/examples/preloader.gif
 /var/db/photoprism/assets/examples/purple.tiff
+/var/db/photoprism/assets/examples/Random.docx
 /var/db/photoprism/assets/examples/robot_magenta.jpg
 /var/db/photoprism/assets/examples/rope_blue_cyan.jpg
+/var/db/photoprism/assets/examples/Screenshot 2019-05-21 at 10.45.52.png
 /var/db/photoprism/assets/examples/sharks_blue.jpg
 /var/db/photoprism/assets/examples/snake_lime_brown.jpg
 /var/db/photoprism/assets/examples/table_white.jpg
@@ -84,7 +85,8 @@ lib/libtensorflow_framework.so.1.15.2
 /var/db/photoprism/assets/examples/tweethog.png
 /var/db/photoprism/assets/examples/yellow_rose-small.bmp
 /var/db/photoprism/assets/examples/zebra_green_brown.jpg
-/var/db/photoprism/assets/locales/README.md
+/var/db/photoprism/assets/locales/cs/default.mo
+/var/db/photoprism/assets/locales/cs/default.po
 /var/db/photoprism/assets/locales/de/default.mo
 /var/db/photoprism/assets/locales/de/default.po
 /var/db/photoprism/assets/locales/en/default.mo
@@ -93,8 +95,16 @@ lib/libtensorflow_framework.so.1.15.2
 /var/db/photoprism/assets/locales/es/default.po
 /var/db/photoprism/assets/locales/fr/default.mo
 /var/db/photoprism/assets/locales/fr/default.po
+/var/db/photoprism/assets/locales/he/he.mo
+/var/db/photoprism/assets/locales/he/he.po
 /var/db/photoprism/assets/locales/hi/default.mo
 /var/db/photoprism/assets/locales/hi/default.po
+/var/db/photoprism/assets/locales/it/default.mo
+/var/db/photoprism/assets/locales/it/default.po
+/var/db/photoprism/assets/locales/ja_JP/default.mo
+/var/db/photoprism/assets/locales/ja_JP/default.po
+/var/db/photoprism/assets/locales/ku/default.mo
+/var/db/photoprism/assets/locales/ku/default.po
 /var/db/photoprism/assets/locales/messages.pot
 /var/db/photoprism/assets/locales/nb/default.mo
 /var/db/photoprism/assets/locales/nb/default.po
@@ -104,12 +114,13 @@ lib/libtensorflow_framework.so.1.15.2
 /var/db/photoprism/assets/locales/pl/default.po
 /var/db/photoprism/assets/locales/pt_BR/default.mo
 /var/db/photoprism/assets/locales/pt_BR/default.po
+/var/db/photoprism/assets/locales/README.md
 /var/db/photoprism/assets/locales/ru/default.mo
 /var/db/photoprism/assets/locales/ru/default.po
-/var/db/photoprism/assets/locales/zh/default.mo
-/var/db/photoprism/assets/locales/zh/default.po
 /var/db/photoprism/assets/locales/zh_TW/default.mo
 /var/db/photoprism/assets/locales/zh_TW/default.po
+/var/db/photoprism/assets/locales/zh/default.mo
+/var/db/photoprism/assets/locales/zh/default.po
 /var/db/photoprism/assets/nasnet/labels.txt
 /var/db/photoprism/assets/nasnet/saved_model.pb
 /var/db/photoprism/assets/nasnet/variables/variables.data-00000-of-00001
@@ -580,6 +591,9 @@ lib/libtensorflow_framework.so.1.15.2
 /var/db/photoprism/assets/static/build/img/e3f799c6dec9af194c86decdf7392405.png
 /var/db/photoprism/assets/static/build/share.css
 /var/db/photoprism/assets/static/build/share.js
+/var/db/photoprism/assets/static/build/sw.js
+/var/db/photoprism/assets/static/font/icon.eot
+/var/db/photoprism/assets/static/font/icon.woff
 /var/db/photoprism/assets/static/font/Open Sans Bold/0-255.pbf
 /var/db/photoprism/assets/static/font/Open Sans Bold/1024-1279.pbf
 /var/db/photoprism/assets/static/font/Open Sans Bold/10240-10495.pbf
@@ -1604,8 +1618,6 @@ lib/libtensorflow_framework.so.1.15.2
 /var/db/photoprism/assets/static/font/Open Sans Semibold/9472-9727.pbf
 /var/db/photoprism/assets/static/font/Open Sans Semibold/9728-9983.pbf
 /var/db/photoprism/assets/static/font/Open Sans Semibold/9984-10239.pbf
-/var/db/photoprism/assets/static/font/icon.eot
-/var/db/photoprism/assets/static/font/icon.woff
 /var/db/photoprism/assets/static/font/src/mapboxgl-ctrl-zoom-in.svg
 /var/db/photoprism/assets/static/font/src/mapboxgl-ctrl-zoom-out.svg
 /var/db/photoprism/assets/static/geo/world.json
@@ -1664,13 +1676,21 @@ lib/libtensorflow_framework.so.1.15.2
 /var/db/photoprism/assets/templates/minimal.tmpl
 /var/db/photoprism/assets/templates/rainbow.tmpl
 /var/db/photoprism/assets/templates/share.tmpl
-@dir /var/db/photoprism/assets/examples/.photoprism
+@dir /var/db/photoprism
+@dir /var/db/photoprism/assets
 @dir /var/db/photoprism/assets/examples
+@dir /var/db/photoprism/assets/examples/.photoprism
+@dir /var/db/photoprism/assets/locales
+@dir /var/db/photoprism/assets/locales/cs
 @dir /var/db/photoprism/assets/locales/de
 @dir /var/db/photoprism/assets/locales/en
 @dir /var/db/photoprism/assets/locales/es
 @dir /var/db/photoprism/assets/locales/fr
+@dir /var/db/photoprism/assets/locales/he
 @dir /var/db/photoprism/assets/locales/hi
+@dir /var/db/photoprism/assets/locales/it
+@dir /var/db/photoprism/assets/locales/ja_JP
+@dir /var/db/photoprism/assets/locales/ku
 @dir /var/db/photoprism/assets/locales/nb
 @dir /var/db/photoprism/assets/locales/nl
 @dir /var/db/photoprism/assets/locales/pl
@@ -1678,24 +1698,22 @@ lib/libtensorflow_framework.so.1.15.2
 @dir /var/db/photoprism/assets/locales/ru
 @dir /var/db/photoprism/assets/locales/zh
 @dir /var/db/photoprism/assets/locales/zh_TW
-@dir /var/db/photoprism/assets/locales
-@dir /var/db/photoprism/assets/nasnet/variables
 @dir /var/db/photoprism/assets/nasnet
-@dir /var/db/photoprism/assets/nsfw/variables
+@dir /var/db/photoprism/assets/nasnet/variables
 @dir /var/db/photoprism/assets/nsfw
+@dir /var/db/photoprism/assets/nsfw/variables
 @dir /var/db/photoprism/assets/profiles
+@dir /var/db/photoprism/assets/static
 @dir /var/db/photoprism/assets/static/brands
+@dir /var/db/photoprism/assets/static/build
 @dir /var/db/photoprism/assets/static/build/fonts
 @dir /var/db/photoprism/assets/static/build/img
-@dir /var/db/photoprism/assets/static/build
+@dir /var/db/photoprism/assets/static/font
 @dir /var/db/photoprism/assets/static/font/Open Sans Bold
 @dir /var/db/photoprism/assets/static/font/Open Sans Italic
 @dir /var/db/photoprism/assets/static/font/Open Sans Regular
 @dir /var/db/photoprism/assets/static/font/Open Sans Semibold
 @dir /var/db/photoprism/assets/static/font/src
-@dir /var/db/photoprism/assets/static/font
 @dir /var/db/photoprism/assets/static/geo
 @dir /var/db/photoprism/assets/static/img
-@dir /var/db/photoprism/assets/static
 @dir /var/db/photoprism/assets/templates
-@dir /var/db/photoprism/assets

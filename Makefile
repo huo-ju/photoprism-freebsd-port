@@ -10,14 +10,16 @@ COMMENT=	Personal Photo Management powered by Go and Google TensorFlow
 LICENSE=	AGPLv3
 
 RUN_DEPENDS=  ffmpeg:multimedia/ffmpeg
-BUILD_DEPENDS=  ${RUN_DEPENDS} \
+EXTRACT_DEPENDS=  ${RUN_DEPENDS} \
 	bash:shells/bash \
-	wget:ftp/wget \
+	bazel:devel/bazel029 \
+	git:devel/git \
+	gmake:devel/gmake \
 	go:lang/go \
-	python3:lang/python3 \
-	bazel:devel/bazel029
+	npm:www/npm-node14 \
+	wget:ftp/wget
 
-USES= gmake
+USES= gmake python:3.6+,build
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	photoprism
@@ -33,12 +35,11 @@ TF_VERSION = 1.15.2
 
 OPTIONS_SINGLE=		CPUFEATURE 
 OPTIONS_SINGLE_CPUFEATURE=	NONE AVX AVX2
-OPTIONS_DEFAULT = NONE
-CPUFEATURE_DESC=          Enable tensorflow using features available on your CPU
+OPTIONS_DEFAULT = AVX
+CPUFEATURE_DESC=          Enable AVX CPU extensions for Tensorflow
 NONE_VARS=	BAZEL_COPT=""
 AVX_VARS=	BAZEL_COPT="--copt=-march=core-avx-i --host_copt=-march=core-avx-i"
 AVX2_VARS=	BAZEL_COPT="--copt=-march=core-avx2 --host_copt=-march=core-avx2"
-
 
 .include <bsd.port.options.mk>
 .if ${OPSYS} == FreeBSD && ${OSVERSION} > 1100000 && ${OSVERSION} < 1200000
@@ -50,10 +51,13 @@ post-extract:
 	@${REINPLACE_CMD} -e 's|sha1sum|shasum|g' ${WRKSRC}/scripts/download-nsfw.sh
 	cd ${WRKSRC}/docker/tensorflow && gmake download
 
-
 pre-build:
+	@${REINPLACE_CMD} -e "s|\$$PYTHON_BIN_PATH|$(PYTHON_CMD)|" ${WRKSRC}/docker/tensorflow/tensorflow-$(TF_VERSION)/configure
 	@${REINPLACE_CMD} -e 's|0\.26\.1|0\.29\.0|g' ${WRKSRC}/docker/tensorflow/tensorflow-$(TF_VERSION)/configure.py
-	cd ${WRKSRC}/docker/tensorflow/tensorflow-${TF_VERSION} && ./configure && bazel --output_user_root="${WRKDIR}/.bazel" build --config=opt //tensorflow:libtensorflow.so ${BAZEL_COPT} && ./create_archive.sh freebsd-cpu ${TF_VERSION}
+	@${REINPLACE_CMD} -e "s|'--batch'|\'--batch\', \'--output_user_root=\"${WRKDIR}/.bazel\"\'|" ${WRKSRC}/docker/tensorflow/tensorflow-$(TF_VERSION)/configure.py
+	cd ${WRKSRC}/docker/tensorflow/tensorflow-${TF_VERSION} && ./configure
+	cd ${WRKSRC}/docker/tensorflow/tensorflow-${TF_VERSION} && bazel --output_user_root="${WRKDIR}/.bazel" build --config=opt //tensorflow:libtensorflow.so ${BAZEL_COPT}
+	cd ${WRKSRC}/docker/tensorflow/tensorflow-${TF_VERSION} && ./create_archive.sh freebsd-cpu ${TF_VERSION}
 	@${REINPLACE_CMD} -e 's|	go build -v ./...|	CGO_CFLAGS="-I${WRKSRC}/docker/tensorflow/tensorflow-$(TF_VERSION)/tmp/include" CGO_LDFLAGS="-L${WRKSRC}/docker/tensorflow/tensorflow-$(TF_VERSION)/tmp/lib" go build -v ./cmd/... ./internal/... ./pkg/...|g' ${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e 's|	scripts/build.sh debug|	CGO_CFLAGS="-I${WRKSRC}/docker/tensorflow/tensorflow-$(TF_VERSION)/tmp/include" CGO_LDFLAGS="-L${WRKSRC}/docker/tensorflow/tensorflow-$(TF_VERSION)/tmp/lib" scripts/build.sh debug|g' ${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e 's|PHOTOPRISM_VERSION=.*|PHOTOPRISM_VERSION=${GH_TAGNAME}|' ${WRKSRC}/scripts/build.sh
@@ -68,6 +72,6 @@ do-install:
 	${CP} -r ${WRKSRC}/assets ${STAGEDIR}${PHOTOPRISM_DATA_DIR}/assets
 
 pre-install:
-	${MKDIR} ${PHOTOPRISM_DATA_DIR}
+	${MKDIR} ${STAGEDIR}${PHOTOPRISM_DATA_DIR}
 
 .include <bsd.port.mk>
