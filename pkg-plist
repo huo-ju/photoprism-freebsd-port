@@ -1,8 +1,10 @@
 bin/photoprism
-lib/libtensorflow.so.1
 lib/libtensorflow.so.1.15.2
-lib/libtensorflow_framework.so.1
+lib/libtensorflow.so.1
+lib/libtensorflow.so
 lib/libtensorflow_framework.so.1.15.2
+lib/libtensorflow_framework.so.1
+lib/libtensorflow_framework.so
 /var/db/photoprism/assets/examples/.photoprism/example.jpg
 /var/db/photoprism/assets/examples/.ppignore
 /var/db/photoprism/assets/examples/6720px_white.jpg
