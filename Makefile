@@ -9,7 +9,8 @@ COMMENT=	Personal Photo Management powered by Go and Google TensorFlow
 
 LICENSE=	AGPLv3
 
-RUN_DEPENDS=  ffmpeg:multimedia/ffmpeg
+RUN_DEPENDS=  ffmpeg:multimedia/ffmpeg \
+	exiftool:graphics/p5-Image-ExifTool
 EXTRACT_DEPENDS=  ${RUN_DEPENDS} \
 	bash:shells/bash \
 	bazel:devel/bazel029 \
