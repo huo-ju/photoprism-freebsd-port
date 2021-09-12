@@ -62,6 +62,10 @@ TF_NEED_CUDA_VARS_OFF=	TF_ENV+="TF_NEED_CUDA=0"
 EXTRA_PATCHES=	${PATCHDIR}/extra-patch-docker_tensorflow_tensorflow-1.15.2_tensorflow_core_protobuf_autotuning.proto
 .endif
 
+.if ${OPSYS} == FreeBSD && ${OSVERSION} > 1200000 && ${OSVERSION} < 1300000
+EXTRA_PATCHES=  ${PATCHDIR}/extra-patch-docker_tensorflow_tensorflow-1.15.2_third_party_repo.bz
+.endif
+
 post-extract:
 	@${REINPLACE_CMD} -e 's|sha1sum|shasum|g' ${WRKSRC}/scripts/download-nasnet.sh
 	@${REINPLACE_CMD} -e 's|sha1sum|shasum|g' ${WRKSRC}/scripts/download-nsfw.sh
