@@ -63,7 +63,7 @@ EXTRA_PATCHES=	${PATCHDIR}/extra-patch-docker_tensorflow_tensorflow-1.15.2_tenso
 .endif
 
 .if ${OPSYS} == FreeBSD && ${OSVERSION} > 1200000 && ${OSVERSION} < 1300000
-EXTRA_PATCHES=  ${PATCHDIR}/extra-patch-docker_tensorflow_tensorflow-1.15.2_third_party_repo.bz
+EXTRA_PATCHES=  ${PATCHDIR}/extra-patch-docker_tensorflow_tensorflow-1.15.2_third_party_repo.bzl
 .endif
 
 post-extract:
