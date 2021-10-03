@@ -130,6 +130,7 @@ lib/libtensorflow_framework.so
 /var/db/photoprism/assets/nasnet/version.txt
 /var/db/photoprism/assets/nsfw/labels.txt
 /var/db/photoprism/assets/nsfw/saved_model.pb
+/var/db/photoprism/assets/facenet/saved_model.pb
 /var/db/photoprism/assets/nsfw/variables/variables.data-00000-of-00001
 /var/db/photoprism/assets/nsfw/variables/variables.index
 /var/db/photoprism/assets/nsfw/version.txt

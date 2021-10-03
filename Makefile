@@ -67,6 +67,7 @@ EXTRA_PATCHES=  ${PATCHDIR}/extra-patch-docker_tensorflow_tensorflow-1.15.2_thir
 .endif
 
 post-extract:
+	@${REINPLACE_CMD} -e 's|sha1sum|shasum|g' ${WRKSRC}/scripts/download-facenet.sh
 	@${REINPLACE_CMD} -e 's|sha1sum|shasum|g' ${WRKSRC}/scripts/download-nasnet.sh
 	@${REINPLACE_CMD} -e 's|sha1sum|shasum|g' ${WRKSRC}/scripts/download-nsfw.sh
 	cd ${WRKSRC}/docker/tensorflow && gmake download
