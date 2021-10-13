@@ -97,8 +97,8 @@ lib/libtensorflow_framework.so
 /var/db/photoprism/assets/locales/es/default.po
 /var/db/photoprism/assets/locales/fr/default.mo
 /var/db/photoprism/assets/locales/fr/default.po
-/var/db/photoprism/assets/locales/he/he.mo
-/var/db/photoprism/assets/locales/he/he.po
+/var/db/photoprism/assets/locales/he/default.mo
+/var/db/photoprism/assets/locales/he/default.po
 /var/db/photoprism/assets/locales/hi/default.mo
 /var/db/photoprism/assets/locales/hi/default.po
 /var/db/photoprism/assets/locales/it/default.mo
@@ -1681,6 +1681,7 @@ lib/libtensorflow_framework.so
 /var/db/photoprism/assets/templates/minimal.tmpl
 /var/db/photoprism/assets/templates/rainbow.tmpl
 /var/db/photoprism/assets/templates/share.tmpl
+/var/db/photoprism/assets/static/plugins/mapbox-gl-rtl-text/v0.2.3/mapbox-gl-rtl-text.js
 @dir /var/db/photoprism
 @dir /var/db/photoprism/assets
 @dir /var/db/photoprism/assets/examples
@@ -1720,5 +1721,8 @@ lib/libtensorflow_framework.so
 @dir /var/db/photoprism/assets/static/font/Open Sans Semibold
 @dir /var/db/photoprism/assets/static/font/src
 @dir /var/db/photoprism/assets/static/geo
+@dir /var/db/photoprism/assets/static/plugins
+@dir /var/db/photoprism/assets/static/plugins/mapbox-gl-rtl-text
+@dir /var/db/photoprism/assets/static/plugins/mapbox-gl-rtl-text/v0.2.3
 @dir /var/db/photoprism/assets/static/img
 @dir /var/db/photoprism/assets/templates
