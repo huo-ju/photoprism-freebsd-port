@@ -15,13 +15,6 @@ cd photoprism-freebsd-port
 make config
 make && make install
 ```
-or 
-
-Upgrade and skip the tensorflow building
-
-```
-make FLAVOR=notf && make FLAVOR=notf install
-```
 
 ### Poudriere
 
