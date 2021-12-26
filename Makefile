@@ -88,6 +88,7 @@ pre-build:
 	cd ${WRKSRC}/docker/tensorflow/tensorflow-${TF_VERSION} && PYTHON_BIN_PATH="$(PYTHON_CMD)" PYTHON_LIB_PATH="$(PYTHON_CMD)/site-packages" TF_ENABLE_XLA="False" ${TF_ENV} ./configure
 	cd ${WRKSRC}/docker/tensorflow/tensorflow-${TF_VERSION} && bazel --output_user_root="${WRKDIR}/.bazel" build --config=opt //tensorflow:libtensorflow.so ${BAZEL_COPT}
 	cd ${WRKSRC}/docker/tensorflow/tensorflow-${TF_VERSION} && ./create_archive.sh freebsd-cpu ${TF_VERSION}
+	cd ${WRKSRC}/docker/tensorflow/tensorflow-${TF_VERSION} && bazel --output_user_root="${WRKDIR}/.bazel" shutdown
 	@${REINPLACE_CMD} -e 's|	go build -v ./...|	CGO_CFLAGS="-I${WRKSRC}/docker/tensorflow/tensorflow-$(TF_VERSION)/tmp/include" CGO_LDFLAGS="-L${WRKSRC}/docker/tensorflow/tensorflow-$(TF_VERSION)/tmp/lib" go build -v ./cmd/... ./internal/... ./pkg/...|g' ${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e 's|	scripts/build.sh debug|	CGO_CFLAGS="-I${WRKSRC}/docker/tensorflow/tensorflow-$(TF_VERSION)/tmp/include" CGO_LDFLAGS="-L${WRKSRC}/docker/tensorflow/tensorflow-$(TF_VERSION)/tmp/lib" scripts/build.sh debug|g' ${WRKSRC}/Makefile
 .else
