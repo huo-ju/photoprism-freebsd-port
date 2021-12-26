@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	photoprism
-DISTVERSION=	g20211130
+DISTVERSION=	g20211215
 CATEGORIES=	www
 
 MAINTAINER=	huoju@devep.net
@@ -16,25 +16,23 @@ EXTRACT_DEPENDS=  ${RUN_DEPENDS} \
 	bazel:devel/bazel029 \
 	git:devel/git \
 	gmake:devel/gmake \
-	go:lang/go \
+	go>=1.17.1:lang/go \
 	npm:www/npm-node14 \
 	wget:ftp/wget
+
+BUILD_DEPENDS= ${EXTRACT_DEPENDS}
 
 USES= gmake python:3.6+,build
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	photoprism
 GH_PROJECT=	photoprism
-GH_TAGNAME=     13cfcf6d2081045dd236db56ee842edce8332cca
+GH_TAGNAME=     93b26f197908dd825dfa302d17793185cc3eab8c
 
 USE_RC_SUBR=    photoprism
 PHOTOPRISM_DATA_DIR=      /var/db/photoprism
 SUB_LIST+=      PHOTOPRISM_DATA_DIR=${PHOTOPRISM_DATA_DIR}
 SUB_FILES+=      pkg-install pkg-message
-
-FLAVORS=	default notf
-notf_PKGNAMESUFFIX=	-notf
-notf_PLIST=	pkg-plist-notf
 
 TF_VERSION = 1.15.2
 
@@ -70,18 +68,14 @@ EXTRA_PATCHES=	${PATCHDIR}/extra-patch-docker_tensorflow_tensorflow-1.15.2_tenso
 EXTRA_PATCHES=  ${PATCHDIR}/extra-patch-docker_tensorflow_tensorflow-1.15.2_third_party_repo.bzl
 .endif
 
-
 post-extract:
 	@${REINPLACE_CMD} -e 's|sha1sum|shasum|g' ${WRKSRC}/scripts/download-facenet.sh
 	@${REINPLACE_CMD} -e 's|sha1sum|shasum|g' ${WRKSRC}/scripts/download-nasnet.sh
 	@${REINPLACE_CMD} -e 's|sha1sum|shasum|g' ${WRKSRC}/scripts/download-nsfw.sh
-
-.if ${FLAVOR:U} != notf
+	cd ${WRKSRC} && git init && git add assets/locales
 	cd ${WRKSRC}/docker/tensorflow && gmake download
-.endif
 
 pre-build:
-.if ${FLAVOR:U} != notf
 	@${REINPLACE_CMD} -e "s|\$$PYTHON_BIN_PATH|$(PYTHON_CMD)|" ${WRKSRC}/docker/tensorflow/tensorflow-$(TF_VERSION)/configure
 	@${REINPLACE_CMD} -e 's|0\.26\.1|0\.29\.0|g' ${WRKSRC}/docker/tensorflow/tensorflow-$(TF_VERSION)/configure.py
 	@${REINPLACE_CMD} -e "s|'--batch'|\'--batch\', \'--output_user_root=\"${WRKDIR}/.bazel\"\'|" ${WRKSRC}/docker/tensorflow/tensorflow-$(TF_VERSION)/configure.py
@@ -90,23 +84,16 @@ pre-build:
 	cd ${WRKSRC}/docker/tensorflow/tensorflow-${TF_VERSION} && ./create_archive.sh freebsd-cpu ${TF_VERSION}
 	@${REINPLACE_CMD} -e 's|	go build -v ./...|	CGO_CFLAGS="-I${WRKSRC}/docker/tensorflow/tensorflow-$(TF_VERSION)/tmp/include" CGO_LDFLAGS="-L${WRKSRC}/docker/tensorflow/tensorflow-$(TF_VERSION)/tmp/lib" go build -v ./cmd/... ./internal/... ./pkg/...|g' ${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e 's|	scripts/build.sh debug|	CGO_CFLAGS="-I${WRKSRC}/docker/tensorflow/tensorflow-$(TF_VERSION)/tmp/include" CGO_LDFLAGS="-L${WRKSRC}/docker/tensorflow/tensorflow-$(TF_VERSION)/tmp/lib" scripts/build.sh debug|g' ${WRKSRC}/Makefile
-.else
-	@${REINPLACE_CMD} -e 's|	go build -v ./...|	CGO_LDFLAGS="-L/usr/local/lib" go build -v ./cmd/... ./internal/... ./pkg/...|g' ${WRKSRC}/Makefile
-	@${REINPLACE_CMD} -e 's|	scripts/build.sh debug|	CGO_LDFLAGS="-L/usr/local/lib" scripts/build.sh debug|g' ${WRKSRC}/Makefile
-.endif
 	@${REINPLACE_CMD} -e 's|PHOTOPRISM_VERSION=.*|PHOTOPRISM_VERSION=${GH_TAGNAME}|' ${WRKSRC}/scripts/build.sh
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/photoprism ${STAGEDIR}${PREFIX}/bin
-
-.if ${FLAVOR:U} != notf
 	${INSTALL_LIB} ${WRKSRC}/docker/tensorflow/tensorflow-$(TF_VERSION)/tmp/lib/libtensorflow.so ${STAGEDIR}${PREFIX}/lib/libtensorflow.so.1.15.2
 	${INSTALL_LIB} ${WRKSRC}/docker/tensorflow/tensorflow-$(TF_VERSION)/tmp/lib/libtensorflow_framework.so ${STAGEDIR}${PREFIX}/lib/libtensorflow_framework.so.1.15.2
 	${LN} -fs libtensorflow_framework.so.1.15.2 ${STAGEDIR}${PREFIX}/lib/libtensorflow_framework.so.1
 	${LN} -fs libtensorflow.so.1.15.2 ${STAGEDIR}${PREFIX}/lib/libtensorflow.so.1
 	${LN} -fs libtensorflow_framework.so.1.15.2 ${STAGEDIR}${PREFIX}/lib/libtensorflow_framework.so
 	${LN} -fs libtensorflow.so.1.15.2 ${STAGEDIR}${PREFIX}/lib/libtensorflow.so
-.endif
 	${MKDIR} ${STAGEDIR}${PHOTOPRISM_DATA_DIR}
 	${CP} -r ${WRKSRC}/assets ${STAGEDIR}${PHOTOPRISM_DATA_DIR}/assets
 
