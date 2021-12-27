@@ -1,6 +1,16 @@
 # The photoprism port for FreeBSD
 
-The port will compile and install [libtensorflow](https://www.tensorflow.org/install/lang_c) 1.15.2 and build [photoprism](https://github.com/photoprism/photoprism) from source on FreeBSD.
+The port will compile and install
+[photoprism](https://github.com/photoprism/photoprism) from source on FreeBSD.
+
+## Dependencies
+
+This depends on libtensorflow1, which is in progress:
+* [Bug](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=260694)
+* [Git repo](https://github.com/psa/libtensorflow1-freebsd-port)
+
+Until it is build by ports, it's recommended to clone the repo and build a
+private copy using poudriere.
 
 ## If you need pre-built binaries you can use this repo
 
@@ -20,10 +30,10 @@ make && make install
 
 If you are using poudriere to build the port, you will need to set the
 following in `poudriere.conf`:
-* `ALLOW_NETWORKING_PACKAGES="photoprism"` as the `dep-js`
-  target calls `npm audit fix`.
+* `ALLOW_NETWORKING_PACKAGES="photoprism"` as the `dep-js` target downloads
+  node packages.
 * `TMPFS_LIMIT` or `MFSSIZE` should be at least `6` as the build is very large.
-* `MAX_MEMORY=8` or more is required for bazel
+* `MAX_MEMORY=16` or more is required for node
 
 ## Add entries to rc.conf
 
