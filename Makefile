@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	photoprism
-DISTVERSION=	g211215
+DISTVERSION=	g20211215
 CATEGORIES=	www
 
 MAINTAINER=	huoju@devep.net
@@ -21,6 +21,8 @@ EXTRACT_DEPENDS=  ${RUN_DEPENDS} \
 	go>=1.17.5:lang/go \
 	npm:www/npm-node17 \
 	wget:ftp/wget
+
+BUILD_DEPENDS= ${EXTRACT_DEPENDS}
 
 USES= gmake python:3.6+,build
 
