@@ -49,12 +49,19 @@
 @dir /var/db/photoprism/assets/static/icons/mint
 @dir /var/db/photoprism/assets/static/img
 @dir /var/db/photoprism/assets/static/plugins
-@dir /var/db/photoprism/assets/static/plugins/mapbox-gl-rtl-text
 @dir /var/db/photoprism/assets/static/plugins/mapbox-gl-rtl-text/v0.2.3
+@dir /var/db/photoprism/assets/static/plugins/mapbox-gl-rtl-text
 @dir /var/db/photoprism/assets/templates
 /var/db/photoprism/assets/examples/.photoprism/example.jpg
 /var/db/photoprism/assets/examples/.ppignore
 /var/db/photoprism/assets/examples/6720px_white.jpg
+/var/db/photoprism/assets/examples/IMG_4120 (1).JPG
+/var/db/photoprism/assets/examples/IMG_4120 copy.JPG
+/var/db/photoprism/assets/examples/IMG_4120.AAE
+/var/db/photoprism/assets/examples/IMG_4120.JPG
+/var/db/photoprism/assets/examples/IMG_E4120.JPG
+/var/db/photoprism/assets/examples/Random.docx
+/var/db/photoprism/assets/examples/Screenshot 2019-05-21 at 10.45.52.png
 /var/db/photoprism/assets/examples/airport_grey
 /var/db/photoprism/assets/examples/beach_colorfilter.jpg
 /var/db/photoprism/assets/examples/beach_sand.jpg
@@ -96,11 +103,6 @@
 /var/db/photoprism/assets/examples/fish_anthias_magenta.jpg
 /var/db/photoprism/assets/examples/giraffe_green_brown.jpg
 /var/db/photoprism/assets/examples/gopher-video.mp4
-/var/db/photoprism/assets/examples/IMG_4120 (1).JPG
-/var/db/photoprism/assets/examples/IMG_4120 copy.JPG
-/var/db/photoprism/assets/examples/IMG_4120.AAE
-/var/db/photoprism/assets/examples/IMG_4120.JPG
-/var/db/photoprism/assets/examples/IMG_E4120.JPG
 /var/db/photoprism/assets/examples/instrument_gold.jpg
 /var/db/photoprism/assets/examples/iphone_7.heic
 /var/db/photoprism/assets/examples/iphone_7.json
@@ -116,10 +118,8 @@
 /var/db/photoprism/assets/examples/pineapple_white.jpg
 /var/db/photoprism/assets/examples/preloader.gif
 /var/db/photoprism/assets/examples/purple.tiff
-/var/db/photoprism/assets/examples/Random.docx
 /var/db/photoprism/assets/examples/robot_magenta.jpg
 /var/db/photoprism/assets/examples/rope_blue_cyan.jpg
-/var/db/photoprism/assets/examples/Screenshot 2019-05-21 at 10.45.52.png
 /var/db/photoprism/assets/examples/sharks_blue.jpg
 /var/db/photoprism/assets/examples/snake_lime_brown.jpg
 /var/db/photoprism/assets/examples/table_white.jpg
@@ -136,6 +136,7 @@
 /var/db/photoprism/assets/examples/zebra_green_brown.jpg
 /var/db/photoprism/assets/facenet/saved_model.pb
 /var/db/photoprism/assets/facenet/version.txt
+/var/db/photoprism/assets/locales/README.md
 /var/db/photoprism/assets/LICENSE
 /var/db/photoprism/assets/locales/cs/default.mo
 /var/db/photoprism/assets/locales/cs/default.po
@@ -168,17 +169,16 @@
 /var/db/photoprism/assets/locales/nl/default.po
 /var/db/photoprism/assets/locales/pl/default.mo
 /var/db/photoprism/assets/locales/pl/default.po
-/var/db/photoprism/assets/locales/pt_BR/default.mo
-/var/db/photoprism/assets/locales/pt_BR/default.po
 /var/db/photoprism/assets/locales/pt/default.mo
 /var/db/photoprism/assets/locales/pt/default.po
-/var/db/photoprism/assets/locales/README.md
+/var/db/photoprism/assets/locales/pt_BR/default.mo
+/var/db/photoprism/assets/locales/pt_BR/default.po
 /var/db/photoprism/assets/locales/ru/default.mo
 /var/db/photoprism/assets/locales/ru/default.po
-/var/db/photoprism/assets/locales/zh_TW/default.mo
-/var/db/photoprism/assets/locales/zh_TW/default.po
 /var/db/photoprism/assets/locales/zh/default.mo
 /var/db/photoprism/assets/locales/zh/default.po
+/var/db/photoprism/assets/locales/zh_TW/default.mo
+/var/db/photoprism/assets/locales/zh_TW/default.po
 /var/db/photoprism/assets/nasnet/labels.txt
 /var/db/photoprism/assets/nasnet/saved_model.pb
 /var/db/photoprism/assets/nasnet/variables/variables.data-00000-of-00001
@@ -652,8 +652,6 @@
 /var/db/photoprism/assets/static/build/share.js
 /var/db/photoprism/assets/static/build/share.js.LICENSE.txt
 /var/db/photoprism/assets/static/build/sw.js
-/var/db/photoprism/assets/static/font/icon.eot
-/var/db/photoprism/assets/static/font/icon.woff
 /var/db/photoprism/assets/static/font/Open Sans Bold/0-255.pbf
 /var/db/photoprism/assets/static/font/Open Sans Bold/1024-1279.pbf
 /var/db/photoprism/assets/static/font/Open Sans Bold/10240-10495.pbf
@@ -1678,6 +1676,8 @@
 /var/db/photoprism/assets/static/font/Open Sans Semibold/9472-9727.pbf
 /var/db/photoprism/assets/static/font/Open Sans Semibold/9728-9983.pbf
 /var/db/photoprism/assets/static/font/Open Sans Semibold/9984-10239.pbf
+/var/db/photoprism/assets/static/font/icon.eot
+/var/db/photoprism/assets/static/font/icon.woff
 /var/db/photoprism/assets/static/font/src/mapboxgl-ctrl-zoom-in.svg
 /var/db/photoprism/assets/static/font/src/mapboxgl-ctrl-zoom-out.svg
 /var/db/photoprism/assets/static/geo/world.json
