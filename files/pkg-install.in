@@ -33,6 +33,6 @@ fi
 
 if [ "$2" = "POST-INSTALL" ]; then
 	echo "${USER}:${GROUP} %%PHOTOPRISM_DATA_DIR%%"
-	chown -R ${USER}:${GROUP} %%PHOTOPRISM_DATA_DIR%%
+    echo "You may need to run `chown -R ${USER}:${GROUP} %%PHOTOPRISM_DATA_DIR%%`"
 fi
 

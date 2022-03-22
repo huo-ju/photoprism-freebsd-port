@@ -40,13 +40,15 @@ post-extract:
 	@${REINPLACE_CMD} -e 's|sha1sum|shasum|g' ${WRKSRC}/scripts/download-facenet.sh
 	@${REINPLACE_CMD} -e 's|sha1sum|shasum|g' ${WRKSRC}/scripts/download-nasnet.sh
 	@${REINPLACE_CMD} -e 's|sha1sum|shasum|g' ${WRKSRC}/scripts/download-nsfw.sh
+	@${REINPLACE_CMD} -e 's|	sudo npm install -g npm|	cd frontend \&\& env NODE_ENV=production npm install -D webpack-cli|g' ${WRKSRC}/Makefile
+	@${REINPLACE_CMD} -e 's|dep-js:|dep-js: dep-npm|g' ${WRKSRC}/Makefile
+	@${REINPLACE_CMD} -e 's|build-js:|build-js: dep-js|g' ${WRKSRC}/Makefile
+	@${REINPLACE_CMD} -e 's|all: dep build-js|all: dep-tensorflow build-js dep-go build-go |g' ${WRKSRC}/Makefile
 
 pre-build:
-	@${REINPLACE_CMD} -e 's|all: dep build-js|all: dep build-go|g' ${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e 's|	go build -v ./...|	CGO_LDFLAGS="-L/usr/local/lib" go build -v ./cmd/... ./internal/... ./pkg/...|g' ${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e 's|	scripts/build.sh debug|	CGO_LDFLAGS="-L/usr/local/lib" scripts/build.sh debug|g' ${WRKSRC}/Makefile
 
-	@${REINPLACE_CMD} -e 's|	sudo npm install -g npm|	echo "dep-npm"|g' ${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e 's|BUILD_VERSION=.*|BUILD_VERSION=${GH_TAGNAME}|' ${WRKSRC}/scripts/build.sh
 	@${REINPLACE_CMD} -e 's|BUILD_ARCH=.*|BUILD_ARCH=$$(uname -m)|' ${WRKSRC}/scripts/build.sh
 	@${REINPLACE_CMD} -e 's|main.version=[^"]*|main.version=${DISTVERSION:C/^...//}-${GH_TAGNAME:C/([0-9a-f]{7}).*/\1/}-$${BUILD_OS}-$${BUILD_ARCH}-DEBUG-build-$${BUILD_DATE}|' ${WRKSRC}/scripts/build.sh
