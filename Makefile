@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	photoprism
-DISTVERSION=	g20220302
+DISTVERSION=	g20220528
 CATEGORIES=	www
 
 MAINTAINER=	huoju@devep.net
@@ -18,7 +18,7 @@ EXTRACT_DEPENDS=  ${RUN_DEPENDS} \
 	bash:shells/bash \
 	git:devel/git \
 	gmake:devel/gmake \
-	go>=1.17.5:lang/go \
+	go>=1.18.2:lang/go \
 	npm:www/npm-node17 \
 	wget:ftp/wget
 
@@ -29,7 +29,7 @@ USES= gmake python:3.6+,build
 USE_GITHUB=	yes
 GH_ACCOUNT=	photoprism
 GH_PROJECT=	photoprism
-GH_TAGNAME=     0059f429edac04b3741bf3f85411ada686cf477f
+GH_TAGNAME=     efb5d710c197d2793c0d9ed668140612f40610a7
 
 USE_RC_SUBR=    photoprism
 PHOTOPRISM_DATA_DIR=      /var/db/photoprism
@@ -41,16 +41,18 @@ post-extract:
 	@${REINPLACE_CMD} -e 's|sha1sum|shasum|g' ${WRKSRC}/scripts/download-nasnet.sh
 	@${REINPLACE_CMD} -e 's|sha1sum|shasum|g' ${WRKSRC}/scripts/download-nsfw.sh
 	@${REINPLACE_CMD} -e 's|	sudo npm install -g npm|	cd frontend \&\& env NODE_ENV=production npm install -D webpack-cli|g' ${WRKSRC}/Makefile
-	@${REINPLACE_CMD} -e 's|dep-js:|dep-js: dep-npm|g' ${WRKSRC}/Makefile
-	@${REINPLACE_CMD} -e 's|build-js:|build-js: dep-js|g' ${WRKSRC}/Makefile
-	@${REINPLACE_CMD} -e 's|all: dep build-js|all: dep-tensorflow build-js dep-go build-go |g' ${WRKSRC}/Makefile
+	@${REINPLACE_CMD} -e 's|dep-js:|dep-js: dep-npm|g' ${WRKSRC}/Makefile 
+	@${REINPLACE_CMD} -e 's|build-js:|build-js: dep-js|g' ${WRKSRC}/Makefile 
+	@${REINPLACE_CMD} -e 's|all: dep build-js|all: dep-tensorflow build-js dep-go build-go |g' ${WRKSRC}/Makefile 
 
 pre-build:
 	@${REINPLACE_CMD} -e 's|	go build -v ./...|	CGO_LDFLAGS="-L/usr/local/lib" go build -v ./cmd/... ./internal/... ./pkg/...|g' ${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e 's|	scripts/build.sh debug|	CGO_LDFLAGS="-L/usr/local/lib" scripts/build.sh debug|g' ${WRKSRC}/Makefile
 
 	@${REINPLACE_CMD} -e 's|BUILD_VERSION=.*|BUILD_VERSION=${GH_TAGNAME}|' ${WRKSRC}/scripts/build.sh
+	@${REINPLACE_CMD} -e 's|BUILD_VERSION ?=.*|BUILD_VERSION=${GH_TAGNAME}|' ${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e 's|BUILD_ARCH=.*|BUILD_ARCH=$$(uname -m)|' ${WRKSRC}/scripts/build.sh
+	@${REINPLACE_CMD} -e 's|BUILD_ARCH ?=.*|BUILD_ARCH=$$(uname -m)|' ${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e 's|main.version=[^"]*|main.version=${DISTVERSION:C/^...//}-${GH_TAGNAME:C/([0-9a-f]{7}).*/\1/}-$${BUILD_OS}-$${BUILD_ARCH}-DEBUG-build-$${BUILD_DATE}|' ${WRKSRC}/scripts/build.sh
 
 do-install:

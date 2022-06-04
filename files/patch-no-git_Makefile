@@ -1,13 +1,14 @@
---- Makefile.orig	2021-12-24 08:03:07.382796000 +0000
-+++ Makefile	2021-12-25 17:01:25.432747000 +0000
-132,136d131
-< 	# Revert unnecessary file change?
-< 	POT_UNCHANGED='1 file changed, 1 insertion(+), 1 deletion(-)'
-< 	@if [ ${$(shell git diff --shortstat assets/locales/messages.pot):1:45} == $(POT_UNCHANGED) ]; then\
-< 		git checkout -- assets/locales/messages.pot;\
-< 	fi
-362c357
-<     install-go install-darktable install-tensorflow devtools tar.gz fix-permissions;
-\ No newline at end of file
----
->     install-go install-darktable install-tensorflow devtools tar.gz fix-permissions;
+--- Makefile.orig	2022-06-04 15:19:27.618006000 -0400
++++ Makefile	2022-06-04 15:22:49.855792000 -0400
+@@ -140,11 +140,6 @@
+ generate:
+ 	go generate ./pkg/... ./internal/...
+ 	go fmt ./pkg/... ./internal/...
+-	# revert unnecessary pot file change
+-	POT_UNCHANGED='1 file changed, 1 insertion(+), 1 deletion(-)'
+-	@if [ ${$(shell git diff --shortstat assets/locales/messages.pot):1:45} == $(POT_UNCHANGED) ]; then\
+-		git checkout -- assets/locales/messages.pot;\
+-	fi
+ clean-local-assets:
+ 	rm -rf $(BUILD_PATH)/assets/*
+ clean-local-cache:
