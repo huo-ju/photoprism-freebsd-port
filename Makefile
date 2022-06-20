@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	photoprism
-DISTVERSION=	g20220528
+DISTVERSION=	g20220616
 CATEGORIES=	www
 
 MAINTAINER=	huoju@devep.net
@@ -29,7 +29,7 @@ USES= gmake python:3.6+,build
 USE_GITHUB=	yes
 GH_ACCOUNT=	photoprism
 GH_PROJECT=	photoprism
-GH_TAGNAME=     efb5d710c197d2793c0d9ed668140612f40610a7
+GH_TAGNAME=     0402b8d3977da9077cbae1f74e767626b7e6cc01
 
 USE_RC_SUBR=    photoprism
 PHOTOPRISM_DATA_DIR=      /var/db/photoprism
@@ -54,6 +54,8 @@ pre-build:
 	@${REINPLACE_CMD} -e 's|BUILD_ARCH=.*|BUILD_ARCH=$$(uname -m)|' ${WRKSRC}/scripts/build.sh
 	@${REINPLACE_CMD} -e 's|BUILD_ARCH ?=.*|BUILD_ARCH=$$(uname -m)|' ${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e 's|main.version=[^"]*|main.version=${DISTVERSION:C/^...//}-${GH_TAGNAME:C/([0-9a-f]{7}).*/\1/}-$${BUILD_OS}-$${BUILD_ARCH}-DEBUG-build-$${BUILD_DATE}|' ${WRKSRC}/scripts/build.sh
+	${MKDIR} ${WRKSRC}/build
+	${MKDIR} ${WRKSRC}/assets/static/build
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/photoprism ${STAGEDIR}${PREFIX}/bin
