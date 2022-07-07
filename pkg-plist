@@ -621,14 +621,14 @@ bin/photoprism
 /var/db/photoprism/assets/static/build/2d8017489da689caedc1.woff2
 /var/db/photoprism/assets/static/build/698bd8550d863c20a3e1.ttf
 /var/db/photoprism/assets/static/build/af9a28e7f261a412f581.eot
-/var/db/photoprism/assets/static/build/app.86be0eb938be3d5b55ad.js
-/var/db/photoprism/assets/static/build/app.86be0eb938be3d5b55ad.js.LICENSE.txt
-/var/db/photoprism/assets/static/build/app.b14f54e3863d08c09142.css
+/var/db/photoprism/assets/static/build/app.75af42d89ba210ec1119.js
+/var/db/photoprism/assets/static/build/app.75af42d89ba210ec1119.js.LICENSE.txt
+/var/db/photoprism/assets/static/build/app.e08aca117499a0f21707.css
 /var/db/photoprism/assets/static/build/assets.json
 /var/db/photoprism/assets/static/build/f64c3af3d0d25b9e4e00.svg
-/var/db/photoprism/assets/static/build/share.82d0d500c6d5891f8820.js
-/var/db/photoprism/assets/static/build/share.82d0d500c6d5891f8820.js.LICENSE.txt
-/var/db/photoprism/assets/static/build/share.b14f54e3863d08c09142.css
+/var/db/photoprism/assets/static/build/share.0b6589c48f010d146d51.js
+/var/db/photoprism/assets/static/build/share.0b6589c48f010d146d51.js.LICENSE.txt
+/var/db/photoprism/assets/static/build/share.e08aca117499a0f21707.css
 /var/db/photoprism/assets/static/build/sw.js
 /var/db/photoprism/assets/static/font/Open Sans Bold/0-255.pbf
 /var/db/photoprism/assets/static/font/Open Sans Bold/1024-1279.pbf
@@ -1850,6 +1850,7 @@ bin/photoprism
 /var/db/photoprism/assets/static/img/preview.jpg
 /var/db/photoprism/assets/static/img/wallpaper/kashmir.jpg
 /var/db/photoprism/assets/static/plugins/maplibre-gl-rtl-text/v0.2.3/maplibre-gl-rtl-text.js
+/var/db/photoprism/assets/static/video/404.mp4
 /var/db/photoprism/assets/templates/app.tmpl
 /var/db/photoprism/assets/templates/favicons.tmpl
 /var/db/photoprism/assets/templates/index.tmpl
@@ -1919,6 +1920,7 @@ bin/photoprism
 @dir /var/db/photoprism/assets/static/plugins/maplibre-gl-rtl-text/v0.2.3
 @dir /var/db/photoprism/assets/static/plugins/maplibre-gl-rtl-text
 @dir /var/db/photoprism/assets/static/plugins
+@dir /var/db/photoprism/assets/static/video
 @dir /var/db/photoprism/assets/static
 @dir /var/db/photoprism/assets/templates
 @dir /var/db/photoprism/assets
