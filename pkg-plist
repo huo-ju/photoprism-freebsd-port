@@ -100,6 +100,8 @@ bin/photoprism
 /var/db/photoprism/assets/locales/da/default.po
 /var/db/photoprism/assets/locales/de/default.mo
 /var/db/photoprism/assets/locales/de/default.po
+/var/db/photoprism/assets/locales/el/default.mo
+/var/db/photoprism/assets/locales/el/default.po
 /var/db/photoprism/assets/locales/en/default.mo
 /var/db/photoprism/assets/locales/en/default.po
 /var/db/photoprism/assets/locales/es/default.mo
@@ -621,14 +623,14 @@ bin/photoprism
 /var/db/photoprism/assets/static/build/2d8017489da689caedc1.woff2
 /var/db/photoprism/assets/static/build/698bd8550d863c20a3e1.ttf
 /var/db/photoprism/assets/static/build/af9a28e7f261a412f581.eot
-/var/db/photoprism/assets/static/build/app.75af42d89ba210ec1119.js
-/var/db/photoprism/assets/static/build/app.75af42d89ba210ec1119.js.LICENSE.txt
-/var/db/photoprism/assets/static/build/app.e08aca117499a0f21707.css
+/var/db/photoprism/assets/static/build/app.971373925b83d1db786c.css
+/var/db/photoprism/assets/static/build/app.ed66f1b33f0e60800a6e.js
+/var/db/photoprism/assets/static/build/app.ed66f1b33f0e60800a6e.js.LICENSE.txt
 /var/db/photoprism/assets/static/build/assets.json
 /var/db/photoprism/assets/static/build/f64c3af3d0d25b9e4e00.svg
-/var/db/photoprism/assets/static/build/share.0b6589c48f010d146d51.js
-/var/db/photoprism/assets/static/build/share.0b6589c48f010d146d51.js.LICENSE.txt
-/var/db/photoprism/assets/static/build/share.e08aca117499a0f21707.css
+/var/db/photoprism/assets/static/build/share.05e8d63d665693337cd2.js
+/var/db/photoprism/assets/static/build/share.05e8d63d665693337cd2.js.LICENSE.txt
+/var/db/photoprism/assets/static/build/share.971373925b83d1db786c.css
 /var/db/photoprism/assets/static/build/sw.js
 /var/db/photoprism/assets/static/font/Open Sans Bold/0-255.pbf
 /var/db/photoprism/assets/static/font/Open Sans Bold/1024-1279.pbf
@@ -1867,6 +1869,7 @@ bin/photoprism
 @dir /var/db/photoprism/assets/locales/cs
 @dir /var/db/photoprism/assets/locales/da
 @dir /var/db/photoprism/assets/locales/de
+@dir /var/db/photoprism/assets/locales/el
 @dir /var/db/photoprism/assets/locales/en
 @dir /var/db/photoprism/assets/locales/es
 @dir /var/db/photoprism/assets/locales/fr
