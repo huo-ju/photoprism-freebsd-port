@@ -5,12 +5,11 @@ The port will compile and install
 
 ## Dependencies
 
-This depends on libtensorflow1, which is in progress:
-* [Bug](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=260694)
+This port depends on science/libtensorflow1
+* [freshports](https://www.freshports.org/science/libtensorflow1/)
 * [Git repo](https://github.com/psa/libtensorflow1-freebsd-port)
 
-Until it is build by ports, it's recommended to clone the repo and build a
-private copy using poudriere.
+You can install it by freebsd ports or build a private copy using poudriere.
 
 ## If you need pre-built binaries you can use this repo
 
@@ -22,7 +21,6 @@ https://github.com/psa/photoprism-freebsd-port/releases
 ```
 git clone https://github.com/huo-ju/photoprism-freebsd-port
 cd photoprism-freebsd-port
-make config
 make && make install
 ```
 
