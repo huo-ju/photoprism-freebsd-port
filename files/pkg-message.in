@@ -6,6 +6,10 @@ photoprism_enable="YES"
 photoprism_assetspath="%%PHOTOPRISM_DATA_DIR%%/assets"
 photoprism_storagepath="%%PHOTOPRISM_DATA_DIR%%/storage"
 
+For enable the public mode (no password view):
+
+photoprism_auth_mode="public"
+
 Then set an initial password:
 photoprism --assets-path=%%PHOTOPRISM_DATA_DIR%%/assets --storage-path=%%PHOTOPRISM_DATA_DIR%%/storage --originals-path=%%PHOTOPRISM_DATA_DIR%%/sto
 rage/originals --import-path=%%PHOTOPRISM_DATA_DIR%%/storage/import passwd
