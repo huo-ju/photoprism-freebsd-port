@@ -94,6 +94,8 @@ bin/photoprism
 /var/db/photoprism/assets/locales/ar/default.po
 /var/db/photoprism/assets/locales/bg/default.mo
 /var/db/photoprism/assets/locales/bg/default.po
+/var/db/photoprism/assets/locales/ca/default.mo
+/var/db/photoprism/assets/locales/ca/default.po
 /var/db/photoprism/assets/locales/cs/default.mo
 /var/db/photoprism/assets/locales/cs/default.po
 /var/db/photoprism/assets/locales/da/default.mo
@@ -106,6 +108,8 @@ bin/photoprism
 /var/db/photoprism/assets/locales/en/default.po
 /var/db/photoprism/assets/locales/es/default.mo
 /var/db/photoprism/assets/locales/es/default.po
+/var/db/photoprism/assets/locales/fi/default.mo
+/var/db/photoprism/assets/locales/fi/default.po
 /var/db/photoprism/assets/locales/fr/default.mo
 /var/db/photoprism/assets/locales/fr/default.po
 /var/db/photoprism/assets/locales/he/default.mo
@@ -147,12 +151,16 @@ bin/photoprism
 /var/db/photoprism/assets/locales/ru/default.po
 /var/db/photoprism/assets/locales/sk/default.mo
 /var/db/photoprism/assets/locales/sk/default.po
+/var/db/photoprism/assets/locales/sl/default.mo
+/var/db/photoprism/assets/locales/sl/default.po
 /var/db/photoprism/assets/locales/sv/default.mo
 /var/db/photoprism/assets/locales/sv/default.po
 /var/db/photoprism/assets/locales/th/default.mo
 /var/db/photoprism/assets/locales/th/default.po
 /var/db/photoprism/assets/locales/tr/default.mo
 /var/db/photoprism/assets/locales/tr/default.po
+/var/db/photoprism/assets/locales/uk/default.mo
+/var/db/photoprism/assets/locales/uk/default.po
 /var/db/photoprism/assets/locales/zh/default.mo
 /var/db/photoprism/assets/locales/zh/default.po
 /var/db/photoprism/assets/locales/zh_TW/default.mo
@@ -623,14 +631,14 @@ bin/photoprism
 /var/db/photoprism/assets/static/build/2d8017489da689caedc1.woff2
 /var/db/photoprism/assets/static/build/698bd8550d863c20a3e1.ttf
 /var/db/photoprism/assets/static/build/af9a28e7f261a412f581.eot
-/var/db/photoprism/assets/static/build/app.4039d06458394aac416a.js
-/var/db/photoprism/assets/static/build/app.4039d06458394aac416a.js.LICENSE.txt
-/var/db/photoprism/assets/static/build/app.971373925b83d1db786c.css
+/var/db/photoprism/assets/static/build/app.8b96715ec332728e9a6e.js
+/var/db/photoprism/assets/static/build/app.8b96715ec332728e9a6e.js.LICENSE.txt
+/var/db/photoprism/assets/static/build/app.da5cb012461c81b32d73.css
 /var/db/photoprism/assets/static/build/assets.json
 /var/db/photoprism/assets/static/build/f64c3af3d0d25b9e4e00.svg
-/var/db/photoprism/assets/static/build/share.971373925b83d1db786c.css
-/var/db/photoprism/assets/static/build/share.de5c4bd79c6a1b65eab4.js
-/var/db/photoprism/assets/static/build/share.de5c4bd79c6a1b65eab4.js.LICENSE.txt
+/var/db/photoprism/assets/static/build/share.da5cb012461c81b32d73.css
+/var/db/photoprism/assets/static/build/share.f40014f33c2633f5c5d2.js
+/var/db/photoprism/assets/static/build/share.f40014f33c2633f5c5d2.js.LICENSE.txt
 /var/db/photoprism/assets/static/build/sw.js
 /var/db/photoprism/assets/static/font/Open Sans Bold/0-255.pbf
 /var/db/photoprism/assets/static/font/Open Sans Bold/1024-1279.pbf
@@ -1866,12 +1874,14 @@ bin/photoprism
 @dir /var/db/photoprism/assets/facenet
 @dir /var/db/photoprism/assets/locales/ar
 @dir /var/db/photoprism/assets/locales/bg
+@dir /var/db/photoprism/assets/locales/ca
 @dir /var/db/photoprism/assets/locales/cs
 @dir /var/db/photoprism/assets/locales/da
 @dir /var/db/photoprism/assets/locales/de
 @dir /var/db/photoprism/assets/locales/el
 @dir /var/db/photoprism/assets/locales/en
 @dir /var/db/photoprism/assets/locales/es
+@dir /var/db/photoprism/assets/locales/fi
 @dir /var/db/photoprism/assets/locales/fr
 @dir /var/db/photoprism/assets/locales/he
 @dir /var/db/photoprism/assets/locales/hi
@@ -1892,9 +1902,11 @@ bin/photoprism
 @dir /var/db/photoprism/assets/locales/ro
 @dir /var/db/photoprism/assets/locales/ru
 @dir /var/db/photoprism/assets/locales/sk
+@dir /var/db/photoprism/assets/locales/sl
 @dir /var/db/photoprism/assets/locales/sv
 @dir /var/db/photoprism/assets/locales/th
 @dir /var/db/photoprism/assets/locales/tr
+@dir /var/db/photoprism/assets/locales/uk
 @dir /var/db/photoprism/assets/locales/zh
 @dir /var/db/photoprism/assets/locales/zh_TW
 @dir /var/db/photoprism/assets/locales

@@ -6,6 +6,10 @@ photoprism_enable="YES"
 photoprism_assetspath="%%PHOTOPRISM_DATA_DIR%%/assets"
 photoprism_storagepath="%%PHOTOPRISM_DATA_DIR%%/storage"
 
+or add a yaml file for options, if you prefer:
+
+photoprism_defaultsyaml="/usr/local/etc/photoprism/options.yml"
+
 For enable the public mode (no password view):
 
 photoprism_auth_mode="public"

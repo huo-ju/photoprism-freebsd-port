@@ -24,7 +24,7 @@ export PHOTOPRISM_AUTH_MODE=${photoprism_auth_mode}
 pidfile="/var/run/photoprism.pid"
 procname="/usr/local/bin/photoprism"
 command="/usr/sbin/daemon"
-command_args="-f -T photoprism -p ${pidfile} -u photoprism /usr/local/bin/photoprism --assets-path=${photoprism_assetspath} --storage-path=${photoprism_storagepath} --originals-path=${photoprism_storagepath}/originals --import-path=${photoprism_storagepath}/import ${photoprism_args} start"
+command_args="-f -T photoprism -p ${pidfile} -u photoprism /usr/local/bin/photoprism --defaults-yaml=${photoprism_defaultsyaml} --assets-path=${photoprism_assetspath} --storage-path=${photoprism_storagepath} --originals-path=${photoprism_storagepath}/originals --import-path=${photoprism_storagepath}/import ${photoprism_args} start"
 
 run_rc_command "$1"
 

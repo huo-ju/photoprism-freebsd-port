@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	photoprism
-DISTVERSION=	g20220730
+DISTVERSION=	g20220901
 CATEGORIES=	www
 
 MAINTAINER=	huoju@devep.net
@@ -18,44 +18,55 @@ EXTRACT_DEPENDS=  ${RUN_DEPENDS} \
 	bash:shells/bash \
 	git:devel/git \
 	gmake:devel/gmake \
-	go>=1.18.2:lang/go \
 	npm:www/npm-node18 \
 	wget:ftp/wget
 
-BUILD_DEPENDS= ${EXTRACT_DEPENDS}
+BUILD_DEPENDS= ${EXTRACT_DEPENDS} 
 
-USES= gmake python:3.6+,build
+USES= gmake go:1.19,modules python:3.6+,build 
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	photoprism
 GH_PROJECT=	photoprism
-GH_TAGNAME=     0e1222c8309c14c34443631954f29be4ef1f7f55
+GH_TAGNAME=     f493607b04884d29b7bb2482fc0025b2b63ee59b
 
 USE_RC_SUBR=    photoprism
 PHOTOPRISM_DATA_DIR=      /var/db/photoprism
 SUB_LIST+=      PHOTOPRISM_DATA_DIR=${PHOTOPRISM_DATA_DIR}
 SUB_FILES+=      pkg-install pkg-message
 
+BUILD_OS!=uname -s
+BUILD_DATE!=date -u +%y%m%d
+BUILD_ARCH!=uname -m
+
 post-extract:
 	@${REINPLACE_CMD} -e 's|sha1sum|shasum|g' ${WRKSRC}/scripts/download-facenet.sh
 	@${REINPLACE_CMD} -e 's|sha1sum|shasum|g' ${WRKSRC}/scripts/download-nasnet.sh
 	@${REINPLACE_CMD} -e 's|sha1sum|shasum|g' ${WRKSRC}/scripts/download-nsfw.sh
 	@${REINPLACE_CMD} -e 's|	sudo npm install -g npm|	cd frontend \&\& env NODE_ENV=production npm install -D webpack-cli|g' ${WRKSRC}/Makefile
-	@${REINPLACE_CMD} -e 's|dep-js:|dep-js: dep-npm|g' ${WRKSRC}/Makefile 
-	@${REINPLACE_CMD} -e 's|build-js:|build-js: dep-js|g' ${WRKSRC}/Makefile 
-	@${REINPLACE_CMD} -e 's|all: dep build-js|all: dep-tensorflow build-js dep-go build-go |g' ${WRKSRC}/Makefile 
+	@(cd ${WRKSRC} ; \
+		./scripts/download-facenet.sh ; \
+		./scripts/download-nasnet.sh ; \
+		./scripts/download-nsfw.sh ; \
+	)
 
 pre-build:
-	@${REINPLACE_CMD} -e 's|	go build -v ./...|	CGO_LDFLAGS="-L/usr/local/lib" go build -v ./cmd/... ./internal/... ./pkg/...|g' ${WRKSRC}/Makefile
-	@${REINPLACE_CMD} -e 's|	scripts/build.sh debug|	CGO_LDFLAGS="-L/usr/local/lib" scripts/build.sh debug|g' ${WRKSRC}/Makefile
-
-	@${REINPLACE_CMD} -e 's|BUILD_VERSION=.*|BUILD_VERSION=${GH_TAGNAME}|' ${WRKSRC}/scripts/build.sh
-	@${REINPLACE_CMD} -e 's|BUILD_VERSION ?=.*|BUILD_VERSION=${GH_TAGNAME}|' ${WRKSRC}/Makefile
-	@${REINPLACE_CMD} -e 's|BUILD_ARCH=.*|BUILD_ARCH=$$(uname -m)|' ${WRKSRC}/scripts/build.sh
-	@${REINPLACE_CMD} -e 's|BUILD_ARCH ?=.*|BUILD_ARCH=$$(uname -m)|' ${WRKSRC}/Makefile
-	@${REINPLACE_CMD} -e 's|main.version=[^"]*|main.version=${DISTVERSION:C/^...//}-${GH_TAGNAME:C/([0-9a-f]{7}).*/\1/}-$${BUILD_OS}-$${BUILD_ARCH}-DEBUG-build-$${BUILD_DATE}|' ${WRKSRC}/scripts/build.sh
 	${MKDIR} ${WRKSRC}/build
 	${MKDIR} ${WRKSRC}/assets/static/build
+
+	@( cd ${WRKSRC}/frontend; \
+		npm install --yes -D webpack-cli ; \
+	)
+
+do-build:
+	@( cd ${WRKSRC}/frontend; \
+		env NODE_ENV=production npm run build ; \
+		)
+	@( cd ${WRKSRC} ; \
+		${SETENV} ${MAKE_ENV} ${GO_ENV} ${GO_CMD} build -v -ldflags \
+	"-X main.version=${DISTVERSION:C/^...//}-${GH_TAGNAME:C/([0-9a-f]{7}).*/\1/}-${BUILD_OS}-${BUILD_ARCH}-DEBUG-build-${BUILD_DATE}" \
+	-o ${WRKSRC}/photoprism ./cmd/photoprism/photoprism.go ; \
+		)
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/photoprism ${STAGEDIR}${PREFIX}/bin
