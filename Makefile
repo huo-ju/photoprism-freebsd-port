@@ -10,7 +10,8 @@ COMMENT=	Personal Photo Management Web Service
 LICENSE=	AGPLv3
 
 RUN_DEPENDS=  ffmpeg:multimedia/ffmpeg \
-	exiftool:graphics/p5-Image-ExifTool
+	exiftool:graphics/p5-Image-ExifTool \
+	heif-convert:graphics/libheif
 
 LIB_DEPENDS=	libtensorflow.so.1:science/libtensorflow1
 
