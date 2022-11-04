@@ -52,6 +52,7 @@ bin/photoprism
 /var/db/photoprism/assets/examples/fern_green.jpg
 /var/db/photoprism/assets/examples/ferriswheel_colorful.jpg
 /var/db/photoprism/assets/examples/fish_anthias_magenta.jpg
+/var/db/photoprism/assets/examples/fox.profile0.8bpc.yuv420.avif
 /var/db/photoprism/assets/examples/giraffe_green_brown.jpg
 /var/db/photoprism/assets/examples/gopher-video.mp4
 /var/db/photoprism/assets/examples/instrument_gold.jpg
@@ -90,80 +91,44 @@ bin/photoprism
 /var/db/photoprism/assets/facenet/saved_model.pb
 /var/db/photoprism/assets/facenet/version.txt
 /var/db/photoprism/assets/locales/README.md
-/var/db/photoprism/assets/locales/ar/default.mo
 /var/db/photoprism/assets/locales/ar/default.po
-/var/db/photoprism/assets/locales/bg/default.mo
 /var/db/photoprism/assets/locales/bg/default.po
-/var/db/photoprism/assets/locales/ca/default.mo
 /var/db/photoprism/assets/locales/ca/default.po
-/var/db/photoprism/assets/locales/cs/default.mo
 /var/db/photoprism/assets/locales/cs/default.po
-/var/db/photoprism/assets/locales/da/default.mo
 /var/db/photoprism/assets/locales/da/default.po
-/var/db/photoprism/assets/locales/de/default.mo
 /var/db/photoprism/assets/locales/de/default.po
-/var/db/photoprism/assets/locales/el/default.mo
 /var/db/photoprism/assets/locales/el/default.po
-/var/db/photoprism/assets/locales/en/default.mo
 /var/db/photoprism/assets/locales/en/default.po
-/var/db/photoprism/assets/locales/es/default.mo
 /var/db/photoprism/assets/locales/es/default.po
-/var/db/photoprism/assets/locales/fi/default.mo
+/var/db/photoprism/assets/locales/fa/default.po
 /var/db/photoprism/assets/locales/fi/default.po
-/var/db/photoprism/assets/locales/fr/default.mo
 /var/db/photoprism/assets/locales/fr/default.po
-/var/db/photoprism/assets/locales/he/default.mo
 /var/db/photoprism/assets/locales/he/default.po
-/var/db/photoprism/assets/locales/hi/default.mo
 /var/db/photoprism/assets/locales/hi/default.po
-/var/db/photoprism/assets/locales/hr/default.mo
 /var/db/photoprism/assets/locales/hr/default.po
-/var/db/photoprism/assets/locales/hu/default.mo
 /var/db/photoprism/assets/locales/hu/default.po
-/var/db/photoprism/assets/locales/id/default.mo
 /var/db/photoprism/assets/locales/id/default.po
-/var/db/photoprism/assets/locales/it/default.mo
 /var/db/photoprism/assets/locales/it/default.po
-/var/db/photoprism/assets/locales/ja_JP/default.mo
 /var/db/photoprism/assets/locales/ja_JP/default.po
-/var/db/photoprism/assets/locales/ko/default.mo
 /var/db/photoprism/assets/locales/ko/default.po
-/var/db/photoprism/assets/locales/ku/default.mo
 /var/db/photoprism/assets/locales/ku/default.po
-/var/db/photoprism/assets/locales/lt/default.mo
 /var/db/photoprism/assets/locales/lt/default.po
 /var/db/photoprism/assets/locales/messages.pot
-/var/db/photoprism/assets/locales/ms/default.mo
 /var/db/photoprism/assets/locales/ms/default.po
-/var/db/photoprism/assets/locales/nb/default.mo
 /var/db/photoprism/assets/locales/nb/default.po
-/var/db/photoprism/assets/locales/nl/default.mo
 /var/db/photoprism/assets/locales/nl/default.po
-/var/db/photoprism/assets/locales/pl/default.mo
 /var/db/photoprism/assets/locales/pl/default.po
-/var/db/photoprism/assets/locales/pt/default.mo
 /var/db/photoprism/assets/locales/pt/default.po
-/var/db/photoprism/assets/locales/pt_BR/default.mo
 /var/db/photoprism/assets/locales/pt_BR/default.po
-/var/db/photoprism/assets/locales/ro/default.mo
 /var/db/photoprism/assets/locales/ro/default.po
-/var/db/photoprism/assets/locales/ru/default.mo
 /var/db/photoprism/assets/locales/ru/default.po
-/var/db/photoprism/assets/locales/sk/default.mo
 /var/db/photoprism/assets/locales/sk/default.po
-/var/db/photoprism/assets/locales/sl/default.mo
 /var/db/photoprism/assets/locales/sl/default.po
-/var/db/photoprism/assets/locales/sv/default.mo
 /var/db/photoprism/assets/locales/sv/default.po
-/var/db/photoprism/assets/locales/th/default.mo
 /var/db/photoprism/assets/locales/th/default.po
-/var/db/photoprism/assets/locales/tr/default.mo
 /var/db/photoprism/assets/locales/tr/default.po
-/var/db/photoprism/assets/locales/uk/default.mo
 /var/db/photoprism/assets/locales/uk/default.po
-/var/db/photoprism/assets/locales/zh/default.mo
 /var/db/photoprism/assets/locales/zh/default.po
-/var/db/photoprism/assets/locales/zh_TW/default.mo
 /var/db/photoprism/assets/locales/zh_TW/default.po
 /var/db/photoprism/assets/nasnet/labels.txt
 /var/db/photoprism/assets/nasnet/saved_model.pb
@@ -631,14 +596,12 @@ bin/photoprism
 /var/db/photoprism/assets/static/build/2d8017489da689caedc1.woff2
 /var/db/photoprism/assets/static/build/698bd8550d863c20a3e1.ttf
 /var/db/photoprism/assets/static/build/af9a28e7f261a412f581.eot
-/var/db/photoprism/assets/static/build/app.8b96715ec332728e9a6e.js
-/var/db/photoprism/assets/static/build/app.8b96715ec332728e9a6e.js.LICENSE.txt
-/var/db/photoprism/assets/static/build/app.da5cb012461c81b32d73.css
+/var/db/photoprism/assets/static/build/app.12e911f76b74c7c8592d.css
+/var/db/photoprism/assets/static/build/app.3631423882d75a61333d.js
+/var/db/photoprism/assets/static/build/app.3631423882d75a61333d.js.LICENSE.txt
 /var/db/photoprism/assets/static/build/assets.json
 /var/db/photoprism/assets/static/build/f64c3af3d0d25b9e4e00.svg
-/var/db/photoprism/assets/static/build/share.da5cb012461c81b32d73.css
-/var/db/photoprism/assets/static/build/share.f40014f33c2633f5c5d2.js
-/var/db/photoprism/assets/static/build/share.f40014f33c2633f5c5d2.js.LICENSE.txt
+/var/db/photoprism/assets/static/build/share.99ad243accda0643b6a9.js
 /var/db/photoprism/assets/static/build/sw.js
 /var/db/photoprism/assets/static/font/Open Sans Bold/0-255.pbf
 /var/db/photoprism/assets/static/font/Open Sans Bold/1024-1279.pbf
@@ -1838,6 +1801,10 @@ bin/photoprism
 /var/db/photoprism/assets/static/icons/mint/80.png
 /var/db/photoprism/assets/static/img/agplv3-large.png
 /var/db/photoprism/assets/static/img/agplv3-small.png
+/var/db/photoprism/assets/static/img/avatar/tile_100.jpg
+/var/db/photoprism/assets/static/img/avatar/tile_224.jpg
+/var/db/photoprism/assets/static/img/avatar/tile_50.jpg
+/var/db/photoprism/assets/static/img/avatar/tile_500.jpg
 /var/db/photoprism/assets/static/img/badge-agpl.svg
 /var/db/photoprism/assets/static/img/badge-ask-on-github.svg
 /var/db/photoprism/assets/static/img/badge-chat.svg
@@ -1861,14 +1828,15 @@ bin/photoprism
 /var/db/photoprism/assets/static/img/wallpaper/kashmir.jpg
 /var/db/photoprism/assets/static/plugins/maplibre-gl-rtl-text/v0.2.3/maplibre-gl-rtl-text.js
 /var/db/photoprism/assets/static/video/404.mp4
-/var/db/photoprism/assets/templates/app.tmpl
-/var/db/photoprism/assets/templates/favicons.tmpl
-/var/db/photoprism/assets/templates/index.tmpl
+/var/db/photoprism/assets/templates/404.gohtml
+/var/db/photoprism/assets/templates/app.gohtml
+/var/db/photoprism/assets/templates/favicons.gohtml
+/var/db/photoprism/assets/templates/index.gohtml
 /var/db/photoprism/assets/templates/manifest.json
-/var/db/photoprism/assets/templates/minimal.tmpl
-/var/db/photoprism/assets/templates/rainbow.tmpl
-/var/db/photoprism/assets/templates/share.tmpl
-/var/db/photoprism/assets/templates/splash.tmpl
+/var/db/photoprism/assets/templates/minimal.gohtml
+/var/db/photoprism/assets/templates/rainbow.gohtml
+/var/db/photoprism/assets/templates/share.gohtml
+/var/db/photoprism/assets/templates/splash.gohtml
 @dir /var/db/photoprism/assets/examples/.photoprism
 @dir /var/db/photoprism/assets/examples
 @dir /var/db/photoprism/assets/facenet
@@ -1881,6 +1849,7 @@ bin/photoprism
 @dir /var/db/photoprism/assets/locales/el
 @dir /var/db/photoprism/assets/locales/en
 @dir /var/db/photoprism/assets/locales/es
+@dir /var/db/photoprism/assets/locales/fa
 @dir /var/db/photoprism/assets/locales/fi
 @dir /var/db/photoprism/assets/locales/fr
 @dir /var/db/photoprism/assets/locales/he
@@ -1930,6 +1899,7 @@ bin/photoprism
 @dir /var/db/photoprism/assets/static/icons/logo
 @dir /var/db/photoprism/assets/static/icons/mint
 @dir /var/db/photoprism/assets/static/icons
+@dir /var/db/photoprism/assets/static/img/avatar
 @dir /var/db/photoprism/assets/static/img/wallpaper
 @dir /var/db/photoprism/assets/static/img
 @dir /var/db/photoprism/assets/static/plugins/maplibre-gl-rtl-text/v0.2.3
