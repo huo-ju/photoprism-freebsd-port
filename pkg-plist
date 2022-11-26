@@ -100,6 +100,7 @@ bin/photoprism
 /var/db/photoprism/assets/locales/el/default.po
 /var/db/photoprism/assets/locales/en/default.po
 /var/db/photoprism/assets/locales/es/default.po
+/var/db/photoprism/assets/locales/et/default.po
 /var/db/photoprism/assets/locales/fa/default.po
 /var/db/photoprism/assets/locales/fi/default.po
 /var/db/photoprism/assets/locales/fr/default.po
@@ -596,12 +597,12 @@ bin/photoprism
 /var/db/photoprism/assets/static/build/2d8017489da689caedc1.woff2
 /var/db/photoprism/assets/static/build/698bd8550d863c20a3e1.ttf
 /var/db/photoprism/assets/static/build/af9a28e7f261a412f581.eot
-/var/db/photoprism/assets/static/build/app.12e911f76b74c7c8592d.css
-/var/db/photoprism/assets/static/build/app.3631423882d75a61333d.js
-/var/db/photoprism/assets/static/build/app.3631423882d75a61333d.js.LICENSE.txt
+/var/db/photoprism/assets/static/build/app.81f65a5a51e0137b6cf3.css
+/var/db/photoprism/assets/static/build/app.ba67dd004f8e873b61af.js
+/var/db/photoprism/assets/static/build/app.ba67dd004f8e873b61af.js.LICENSE.txt
 /var/db/photoprism/assets/static/build/assets.json
 /var/db/photoprism/assets/static/build/f64c3af3d0d25b9e4e00.svg
-/var/db/photoprism/assets/static/build/share.99ad243accda0643b6a9.js
+/var/db/photoprism/assets/static/build/share.78cc7a2e0495e5e783cd.js
 /var/db/photoprism/assets/static/build/sw.js
 /var/db/photoprism/assets/static/font/Open Sans Bold/0-255.pbf
 /var/db/photoprism/assets/static/font/Open Sans Bold/1024-1279.pbf
@@ -1849,6 +1850,7 @@ bin/photoprism
 @dir /var/db/photoprism/assets/locales/el
 @dir /var/db/photoprism/assets/locales/en
 @dir /var/db/photoprism/assets/locales/es
+@dir /var/db/photoprism/assets/locales/et
 @dir /var/db/photoprism/assets/locales/fa
 @dir /var/db/photoprism/assets/locales/fi
 @dir /var/db/photoprism/assets/locales/fr

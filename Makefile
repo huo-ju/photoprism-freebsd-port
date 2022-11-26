@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	photoprism
-DISTVERSION=	g20221104
+DISTVERSION=	g20221118
 CATEGORIES=	www
 
 MAINTAINER=	huoju@devep.net
@@ -20,7 +20,7 @@ EXTRACT_DEPENDS=  ${RUN_DEPENDS} \
 	git:devel/git \
 	gmake:devel/gmake \
 	npm:www/npm-node18 \
-	wget:ftp/wget
+	wget:ftp/wget:1.21+
 
 BUILD_DEPENDS= ${EXTRACT_DEPENDS} 
 
@@ -29,7 +29,7 @@ USES= gmake go:1.19,modules python:3.6+,build
 USE_GITHUB=	yes
 GH_ACCOUNT=	photoprism
 GH_PROJECT=	photoprism
-GH_TAGNAME=     20d180b212599f158f54e8a649ee5a0eddbcf2d4
+GH_TAGNAME=     e58fee0fb361715a1814cfd9d4577d3b9ad345e2
 
 USE_RC_SUBR=    photoprism
 PHOTOPRISM_DATA_DIR=      /var/db/photoprism
@@ -44,6 +44,7 @@ post-extract:
 	@${REINPLACE_CMD} -e 's|sha1sum|shasum|g' ${WRKSRC}/scripts/download-facenet.sh
 	@${REINPLACE_CMD} -e 's|sha1sum|shasum|g' ${WRKSRC}/scripts/download-nasnet.sh
 	@${REINPLACE_CMD} -e 's|sha1sum|shasum|g' ${WRKSRC}/scripts/download-nsfw.sh
+	@${REINPLACE_CMD} -e 's|--node-env=production||g' ${WRKSRC}/frontend/package.json
 	@${REINPLACE_CMD} -e 's|	sudo npm install -g npm|	cd frontend \&\& env NODE_ENV=production npm install -D webpack-cli|g' ${WRKSRC}/Makefile
 	@(cd ${WRKSRC} ; \
 		./scripts/download-facenet.sh ; \
@@ -56,7 +57,7 @@ pre-build:
 	${MKDIR} ${WRKSRC}/assets/static/build
 
 	@( cd ${WRKSRC}/frontend; \
-		npm install --yes -D webpack-cli ; \
+		npm install --yes -D webpack-cli@^4.10.0 ; \
 	)
 
 do-build:
