@@ -91,7 +91,9 @@ bin/photoprism
 /var/db/photoprism/assets/facenet/saved_model.pb
 /var/db/photoprism/assets/facenet/version.txt
 /var/db/photoprism/assets/locales/README.md
+/var/db/photoprism/assets/locales/af/default.po
 /var/db/photoprism/assets/locales/ar/default.po
+/var/db/photoprism/assets/locales/be/default.po
 /var/db/photoprism/assets/locales/bg/default.po
 /var/db/photoprism/assets/locales/ca/default.po
 /var/db/photoprism/assets/locales/cs/default.po
@@ -101,6 +103,7 @@ bin/photoprism
 /var/db/photoprism/assets/locales/en/default.po
 /var/db/photoprism/assets/locales/es/default.po
 /var/db/photoprism/assets/locales/et/default.po
+/var/db/photoprism/assets/locales/eu/default.po
 /var/db/photoprism/assets/locales/fa/default.po
 /var/db/photoprism/assets/locales/fi/default.po
 /var/db/photoprism/assets/locales/fr/default.po
@@ -597,12 +600,12 @@ bin/photoprism
 /var/db/photoprism/assets/static/build/2d8017489da689caedc1.woff2
 /var/db/photoprism/assets/static/build/698bd8550d863c20a3e1.ttf
 /var/db/photoprism/assets/static/build/af9a28e7f261a412f581.eot
-/var/db/photoprism/assets/static/build/app.81f65a5a51e0137b6cf3.css
-/var/db/photoprism/assets/static/build/app.ba67dd004f8e873b61af.js
-/var/db/photoprism/assets/static/build/app.ba67dd004f8e873b61af.js.LICENSE.txt
+/var/db/photoprism/assets/static/build/app.14027513df0c6bb83f7d.css
+/var/db/photoprism/assets/static/build/app.3fc9067a35a82f66c7d2.js
+/var/db/photoprism/assets/static/build/app.3fc9067a35a82f66c7d2.js.LICENSE.txt
 /var/db/photoprism/assets/static/build/assets.json
 /var/db/photoprism/assets/static/build/f64c3af3d0d25b9e4e00.svg
-/var/db/photoprism/assets/static/build/share.78cc7a2e0495e5e783cd.js
+/var/db/photoprism/assets/static/build/share.92ffcc743a646acb40c2.js
 /var/db/photoprism/assets/static/build/sw.js
 /var/db/photoprism/assets/static/font/Open Sans Bold/0-255.pbf
 /var/db/photoprism/assets/static/font/Open Sans Bold/1024-1279.pbf
@@ -1800,6 +1803,41 @@ bin/photoprism
 /var/db/photoprism/assets/static/icons/mint/72.png
 /var/db/photoprism/assets/static/icons/mint/76.png
 /var/db/photoprism/assets/static/icons/mint/80.png
+/var/db/photoprism/assets/static/icons/square.svg
+/var/db/photoprism/assets/static/icons/square/100.png
+/var/db/photoprism/assets/static/icons/square/1024.png
+/var/db/photoprism/assets/static/icons/square/114.png
+/var/db/photoprism/assets/static/icons/square/120.png
+/var/db/photoprism/assets/static/icons/square/128.png
+/var/db/photoprism/assets/static/icons/square/144.png
+/var/db/photoprism/assets/static/icons/square/152.png
+/var/db/photoprism/assets/static/icons/square/16.png
+/var/db/photoprism/assets/static/icons/square/160.png
+/var/db/photoprism/assets/static/icons/square/167.png
+/var/db/photoprism/assets/static/icons/square/172.png
+/var/db/photoprism/assets/static/icons/square/175.png
+/var/db/photoprism/assets/static/icons/square/180.png
+/var/db/photoprism/assets/static/icons/square/192.png
+/var/db/photoprism/assets/static/icons/square/196.png
+/var/db/photoprism/assets/static/icons/square/20.png
+/var/db/photoprism/assets/static/icons/square/200.png
+/var/db/photoprism/assets/static/icons/square/216.png
+/var/db/photoprism/assets/static/icons/square/256.png
+/var/db/photoprism/assets/static/icons/square/267.png
+/var/db/photoprism/assets/static/icons/square/29.png
+/var/db/photoprism/assets/static/icons/square/32.png
+/var/db/photoprism/assets/static/icons/square/40.png
+/var/db/photoprism/assets/static/icons/square/400.png
+/var/db/photoprism/assets/static/icons/square/48.png
+/var/db/photoprism/assets/static/icons/square/50.png
+/var/db/photoprism/assets/static/icons/square/512.png
+/var/db/photoprism/assets/static/icons/square/55.png
+/var/db/photoprism/assets/static/icons/square/56.png
+/var/db/photoprism/assets/static/icons/square/60.png
+/var/db/photoprism/assets/static/icons/square/64.png
+/var/db/photoprism/assets/static/icons/square/72.png
+/var/db/photoprism/assets/static/icons/square/76.png
+/var/db/photoprism/assets/static/icons/square/80.png
 /var/db/photoprism/assets/static/img/agplv3-large.png
 /var/db/photoprism/assets/static/img/agplv3-small.png
 /var/db/photoprism/assets/static/img/avatar/tile_100.jpg
@@ -1810,7 +1848,9 @@ bin/photoprism
 /var/db/photoprism/assets/static/img/badge-ask-on-github.svg
 /var/db/photoprism/assets/static/img/badge-chat.svg
 /var/db/photoprism/assets/static/img/badge-docs.svg
+/var/db/photoprism/assets/static/img/badge-mastodon.svg
 /var/db/photoprism/assets/static/img/badge-pixls-us.svg
+/var/db/photoprism/assets/static/img/badge-plus.svg
 /var/db/photoprism/assets/static/img/badge-reddit.svg
 /var/db/photoprism/assets/static/img/badge-twitter.svg
 /var/db/photoprism/assets/static/img/favicon.ico
@@ -1833,15 +1873,18 @@ bin/photoprism
 /var/db/photoprism/assets/templates/app.gohtml
 /var/db/photoprism/assets/templates/favicons.gohtml
 /var/db/photoprism/assets/templates/index.gohtml
-/var/db/photoprism/assets/templates/manifest.json
+/var/db/photoprism/assets/templates/logo.gohtml
 /var/db/photoprism/assets/templates/minimal.gohtml
+/var/db/photoprism/assets/templates/quotes.gohtml
 /var/db/photoprism/assets/templates/rainbow.gohtml
 /var/db/photoprism/assets/templates/share.gohtml
 /var/db/photoprism/assets/templates/splash.gohtml
 @dir /var/db/photoprism/assets/examples/.photoprism
 @dir /var/db/photoprism/assets/examples
 @dir /var/db/photoprism/assets/facenet
+@dir /var/db/photoprism/assets/locales/af
 @dir /var/db/photoprism/assets/locales/ar
+@dir /var/db/photoprism/assets/locales/be
 @dir /var/db/photoprism/assets/locales/bg
 @dir /var/db/photoprism/assets/locales/ca
 @dir /var/db/photoprism/assets/locales/cs
@@ -1851,6 +1894,7 @@ bin/photoprism
 @dir /var/db/photoprism/assets/locales/en
 @dir /var/db/photoprism/assets/locales/es
 @dir /var/db/photoprism/assets/locales/et
+@dir /var/db/photoprism/assets/locales/eu
 @dir /var/db/photoprism/assets/locales/fa
 @dir /var/db/photoprism/assets/locales/fi
 @dir /var/db/photoprism/assets/locales/fr
@@ -1900,6 +1944,7 @@ bin/photoprism
 @dir /var/db/photoprism/assets/static/icons/crisp
 @dir /var/db/photoprism/assets/static/icons/logo
 @dir /var/db/photoprism/assets/static/icons/mint
+@dir /var/db/photoprism/assets/static/icons/square
 @dir /var/db/photoprism/assets/static/icons
 @dir /var/db/photoprism/assets/static/img/avatar
 @dir /var/db/photoprism/assets/static/img/wallpaper
