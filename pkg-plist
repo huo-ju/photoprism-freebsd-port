@@ -600,12 +600,12 @@ bin/photoprism
 /var/db/photoprism/assets/static/build/2d8017489da689caedc1.woff2
 /var/db/photoprism/assets/static/build/698bd8550d863c20a3e1.ttf
 /var/db/photoprism/assets/static/build/af9a28e7f261a412f581.eot
-/var/db/photoprism/assets/static/build/app.14027513df0c6bb83f7d.css
-/var/db/photoprism/assets/static/build/app.1a58ce39fb0067ab1753.js
-/var/db/photoprism/assets/static/build/app.1a58ce39fb0067ab1753.js.LICENSE.txt
+/var/db/photoprism/assets/static/build/app.80ce31321a737d047b91.css
+/var/db/photoprism/assets/static/build/app.c00808a9df40402e5a54.js
+/var/db/photoprism/assets/static/build/app.c00808a9df40402e5a54.js.LICENSE.txt
 /var/db/photoprism/assets/static/build/assets.json
 /var/db/photoprism/assets/static/build/f64c3af3d0d25b9e4e00.svg
-/var/db/photoprism/assets/static/build/share.a2b841f568b23e939447.js
+/var/db/photoprism/assets/static/build/share.b8757b15cd23e488e1f4.js
 /var/db/photoprism/assets/static/build/sw.js
 /var/db/photoprism/assets/static/font/Open Sans Bold/0-255.pbf
 /var/db/photoprism/assets/static/font/Open Sans Bold/1024-1279.pbf
@@ -1838,6 +1838,7 @@ bin/photoprism
 /var/db/photoprism/assets/static/icons/square/72.png
 /var/db/photoprism/assets/static/icons/square/76.png
 /var/db/photoprism/assets/static/icons/square/80.png
+/var/db/photoprism/assets/static/img/404.jpg
 /var/db/photoprism/assets/static/img/agplv3-large.png
 /var/db/photoprism/assets/static/img/agplv3-small.png
 /var/db/photoprism/assets/static/img/avatar/tile_100.jpg
