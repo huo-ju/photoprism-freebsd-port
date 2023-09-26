@@ -15,6 +15,7 @@ bin/photoprism
 /var/db/photoprism/assets/examples/airport_grey
 /var/db/photoprism/assets/examples/beach_colorfilter.jpg
 /var/db/photoprism/assets/examples/beach_sand.jpg
+/var/db/photoprism/assets/examples/beach_sand.json
 /var/db/photoprism/assets/examples/beach_wood.jpg
 /var/db/photoprism/assets/examples/bitcoin_gold.jpg
 /var/db/photoprism/assets/examples/blue-go-video.json
@@ -74,6 +75,8 @@ bin/photoprism
 /var/db/photoprism/assets/examples/pythagoras.json
 /var/db/photoprism/assets/examples/robot_magenta.jpg
 /var/db/photoprism/assets/examples/rope_blue_cyan.jpg
+/var/db/photoprism/assets/examples/samsung-motion-photo.jpg
+/var/db/photoprism/assets/examples/samsung-motion-photo.json
 /var/db/photoprism/assets/examples/sharks_blue.jpg
 /var/db/photoprism/assets/examples/snake_lime_brown.jpg
 /var/db/photoprism/assets/examples/table_white.jpg
@@ -600,12 +603,12 @@ bin/photoprism
 /var/db/photoprism/assets/static/build/2d8017489da689caedc1.woff2
 /var/db/photoprism/assets/static/build/698bd8550d863c20a3e1.ttf
 /var/db/photoprism/assets/static/build/af9a28e7f261a412f581.eot
-/var/db/photoprism/assets/static/build/app.961a79e6d7ab4fb64c30.js
-/var/db/photoprism/assets/static/build/app.961a79e6d7ab4fb64c30.js.LICENSE.txt
-/var/db/photoprism/assets/static/build/app.f5aa246e206dd1366afb.css
+/var/db/photoprism/assets/static/build/app.2c1bb152361596905ebd.js
+/var/db/photoprism/assets/static/build/app.2c1bb152361596905ebd.js.LICENSE.txt
+/var/db/photoprism/assets/static/build/app.f2d6283e5e6fea2d2a61.css
 /var/db/photoprism/assets/static/build/assets.json
 /var/db/photoprism/assets/static/build/f64c3af3d0d25b9e4e00.svg
-/var/db/photoprism/assets/static/build/share.4e9473c997a3ac71bf63.js
+/var/db/photoprism/assets/static/build/share.0d0458cb40c5695233d2.js
 /var/db/photoprism/assets/static/build/sw.js
 /var/db/photoprism/assets/static/font/Open Sans Bold/0-255.pbf
 /var/db/photoprism/assets/static/font/Open Sans Bold/1024-1279.pbf
