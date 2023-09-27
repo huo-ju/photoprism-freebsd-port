@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	photoprism
-DISTVERSION=	g20230719
+DISTVERSION=	g20230923
 CATEGORIES=	www
 
 MAINTAINER=	huoju@devep.net
@@ -24,12 +24,12 @@ EXTRACT_DEPENDS=  ${RUN_DEPENDS} \
 
 BUILD_DEPENDS= ${EXTRACT_DEPENDS} 
 
-USES= gmake go:1.19,modules python:3.6+,build 
+USES= gmake go:1.20,modules python:3.6+,build
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	photoprism
 GH_PROJECT=	photoprism
-GH_TAGNAME=     73fa7bbe86b9d24f6a408ddeac7ca169033c105d
+GH_TAGNAME=     230923-e59851350
 
 USE_RC_SUBR=    photoprism
 PHOTOPRISM_DATA_DIR=      /var/db/photoprism
