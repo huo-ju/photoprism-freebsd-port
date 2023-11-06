@@ -13,7 +13,7 @@ You can install it by freebsd ports or build a private copy using poudriere.
 
 ## If you need pre-built binaries you can use this repo
 
-https://github.com/psa/photoprism-freebsd-port/releases
+https://github.com/Gaojianli/photoprism-freebsd-port
 
 ## Install using ports
 
