@@ -1,4 +1,5 @@
 bin/photoprism
+etc/rc.d/photoprism
 /var/db/photoprism/assets/.buildignore
 /var/db/photoprism/assets/README
 /var/db/photoprism/assets/examples/.photoprism/example.jpg
@@ -603,12 +604,12 @@ bin/photoprism
 /var/db/photoprism/assets/static/build/2d8017489da689caedc1.woff2
 /var/db/photoprism/assets/static/build/698bd8550d863c20a3e1.ttf
 /var/db/photoprism/assets/static/build/af9a28e7f261a412f581.eot
-/var/db/photoprism/assets/static/build/app.2c1bb152361596905ebd.js
-/var/db/photoprism/assets/static/build/app.2c1bb152361596905ebd.js.LICENSE.txt
-/var/db/photoprism/assets/static/build/app.f2d6283e5e6fea2d2a61.css
+/var/db/photoprism/assets/static/build/app.b18b35f861ca0fa3f6e0.css
+/var/db/photoprism/assets/static/build/app.d83ba6df6bafcab8ffb8.js
+/var/db/photoprism/assets/static/build/app.d83ba6df6bafcab8ffb8.js.LICENSE.txt
 /var/db/photoprism/assets/static/build/assets.json
 /var/db/photoprism/assets/static/build/f64c3af3d0d25b9e4e00.svg
-/var/db/photoprism/assets/static/build/share.0d0458cb40c5695233d2.js
+/var/db/photoprism/assets/static/build/share.536b97191acab38f2c21.js
 /var/db/photoprism/assets/static/build/sw.js
 /var/db/photoprism/assets/static/font/Open Sans Bold/0-255.pbf
 /var/db/photoprism/assets/static/font/Open Sans Bold/1024-1279.pbf
