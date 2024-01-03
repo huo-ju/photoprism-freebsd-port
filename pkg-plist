@@ -58,6 +58,8 @@ etc/rc.d/photoprism
 /var/db/photoprism/assets/examples/giraffe_green_brown.jpg
 /var/db/photoprism/assets/examples/gopher-video.mp4
 /var/db/photoprism/assets/examples/instrument_gold.jpg
+/var/db/photoprism/assets/examples/iphone_15_pro.heic
+/var/db/photoprism/assets/examples/iphone_15_pro.json
 /var/db/photoprism/assets/examples/iphone_7.heic
 /var/db/photoprism/assets/examples/iphone_7.json
 /var/db/photoprism/assets/examples/iphone_7.xmp
@@ -604,12 +606,12 @@ etc/rc.d/photoprism
 /var/db/photoprism/assets/static/build/2d8017489da689caedc1.woff2
 /var/db/photoprism/assets/static/build/698bd8550d863c20a3e1.ttf
 /var/db/photoprism/assets/static/build/af9a28e7f261a412f581.eot
-/var/db/photoprism/assets/static/build/app.b18b35f861ca0fa3f6e0.css
-/var/db/photoprism/assets/static/build/app.d83ba6df6bafcab8ffb8.js
-/var/db/photoprism/assets/static/build/app.d83ba6df6bafcab8ffb8.js.LICENSE.txt
+/var/db/photoprism/assets/static/build/app.13ec72dcc1867e2fbc4a.css
+/var/db/photoprism/assets/static/build/app.a78b59a6f251510fde54.js
+/var/db/photoprism/assets/static/build/app.a78b59a6f251510fde54.js.LICENSE.txt
 /var/db/photoprism/assets/static/build/assets.json
 /var/db/photoprism/assets/static/build/f64c3af3d0d25b9e4e00.svg
-/var/db/photoprism/assets/static/build/share.536b97191acab38f2c21.js
+/var/db/photoprism/assets/static/build/share.572c89a0f5ef0cf8eef7.js
 /var/db/photoprism/assets/static/build/sw.js
 /var/db/photoprism/assets/static/font/Open Sans Bold/0-255.pbf
 /var/db/photoprism/assets/static/font/Open Sans Bold/1024-1279.pbf
