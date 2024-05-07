@@ -1,5 +1,4 @@
 bin/photoprism
-etc/rc.d/photoprism
 /var/db/photoprism/assets/.buildignore
 /var/db/photoprism/assets/README
 /var/db/photoprism/assets/examples/.photoprism/example.jpg
