@@ -13,6 +13,8 @@ You can install it by freebsd ports or build a private copy using poudriere.
 
 ## If you need pre-built binaries you can use this repo
 
+AVX2 is required for your CPU.
+
 https://github.com/Gaojianli/photoprism-freebsd-port/releases
 
 ## Install using ports

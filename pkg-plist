@@ -137,6 +137,7 @@ bin/photoprism
 /var/db/photoprism/assets/locales/th/default.po
 /var/db/photoprism/assets/locales/tr/default.po
 /var/db/photoprism/assets/locales/uk/default.po
+/var/db/photoprism/assets/locales/vi/default.po
 /var/db/photoprism/assets/locales/zh/default.po
 /var/db/photoprism/assets/locales/zh_TW/default.po
 /var/db/photoprism/assets/nasnet/labels.txt
@@ -150,7 +151,9 @@ bin/photoprism
 /var/db/photoprism/assets/nsfw/variables/variables.index
 /var/db/photoprism/assets/nsfw/version.txt
 /var/db/photoprism/assets/profiles/raw.pp3
+/var/db/photoprism/assets/static/brands/42-group.svg
 /var/db/photoprism/assets/static/brands/500px.svg
+/var/db/photoprism/assets/static/brands/NOTICE
 /var/db/photoprism/assets/static/brands/accessible-icon.svg
 /var/db/photoprism/assets/static/brands/accusoft.svg
 /var/db/photoprism/assets/static/brands/acquisitions-incorporated.svg
@@ -185,6 +188,7 @@ bin/photoprism
 /var/db/photoprism/assets/static/brands/battle-net.svg
 /var/db/photoprism/assets/static/brands/behance-square.svg
 /var/db/photoprism/assets/static/brands/behance.svg
+/var/db/photoprism/assets/static/brands/bilibili.svg
 /var/db/photoprism/assets/static/brands/bimobject.svg
 /var/db/photoprism/assets/static/brands/bitbucket.svg
 /var/db/photoprism/assets/static/brands/bitcoin.svg
@@ -196,6 +200,9 @@ bin/photoprism
 /var/db/photoprism/assets/static/brands/bluetooth-b.svg
 /var/db/photoprism/assets/static/brands/bluetooth.svg
 /var/db/photoprism/assets/static/brands/bootstrap.svg
+/var/db/photoprism/assets/static/brands/bots.svg
+/var/db/photoprism/assets/static/brands/brave-reverse.svg
+/var/db/photoprism/assets/static/brands/brave.svg
 /var/db/photoprism/assets/static/brands/btc.svg
 /var/db/photoprism/assets/static/brands/buffer.svg
 /var/db/photoprism/assets/static/brands/buromobelexperte.svg
@@ -216,9 +223,11 @@ bin/photoprism
 /var/db/photoprism/assets/static/brands/centos.svg
 /var/db/photoprism/assets/static/brands/chrome.svg
 /var/db/photoprism/assets/static/brands/chromecast.svg
+/var/db/photoprism/assets/static/brands/cloudflare.svg
 /var/db/photoprism/assets/static/brands/cloudscale.svg
 /var/db/photoprism/assets/static/brands/cloudsmith.svg
 /var/db/photoprism/assets/static/brands/cloudversify.svg
+/var/db/photoprism/assets/static/brands/cmplid.svg
 /var/db/photoprism/assets/static/brands/codepen.svg
 /var/db/photoprism/assets/static/brands/codiepie.svg
 /var/db/photoprism/assets/static/brands/confluence.svg
@@ -248,6 +257,7 @@ bin/photoprism
 /var/db/photoprism/assets/static/brands/d-and-d.svg
 /var/db/photoprism/assets/static/brands/dailymotion.svg
 /var/db/photoprism/assets/static/brands/dashcube.svg
+/var/db/photoprism/assets/static/brands/debian.svg
 /var/db/photoprism/assets/static/brands/deezer.svg
 /var/db/photoprism/assets/static/brands/delicious.svg
 /var/db/photoprism/assets/static/brands/deploydog.svg
@@ -328,6 +338,7 @@ bin/photoprism
 /var/db/photoprism/assets/static/brands/glide-g.svg
 /var/db/photoprism/assets/static/brands/glide.svg
 /var/db/photoprism/assets/static/brands/gofore.svg
+/var/db/photoprism/assets/static/brands/golang.svg
 /var/db/photoprism/assets/static/brands/goodreads-g.svg
 /var/db/photoprism/assets/static/brands/goodreads.svg
 /var/db/photoprism/assets/static/brands/google-drive.svg
@@ -336,18 +347,22 @@ bin/photoprism
 /var/db/photoprism/assets/static/brands/google-plus-g.svg
 /var/db/photoprism/assets/static/brands/google-plus-square.svg
 /var/db/photoprism/assets/static/brands/google-plus.svg
+/var/db/photoprism/assets/static/brands/google-scholar.svg
 /var/db/photoprism/assets/static/brands/google-wallet.svg
 /var/db/photoprism/assets/static/brands/google.svg
 /var/db/photoprism/assets/static/brands/gratipay.svg
 /var/db/photoprism/assets/static/brands/grav.svg
 /var/db/photoprism/assets/static/brands/gripfire.svg
 /var/db/photoprism/assets/static/brands/grunt.svg
+/var/db/photoprism/assets/static/brands/guilded.svg
 /var/db/photoprism/assets/static/brands/gulp.svg
 /var/db/photoprism/assets/static/brands/hacker-news-square.svg
 /var/db/photoprism/assets/static/brands/hacker-news.svg
 /var/db/photoprism/assets/static/brands/hackerrank.svg
+/var/db/photoprism/assets/static/brands/hashnode.svg
 /var/db/photoprism/assets/static/brands/hips.svg
 /var/db/photoprism/assets/static/brands/hire-a-helper.svg
+/var/db/photoprism/assets/static/brands/hive.svg
 /var/db/photoprism/assets/static/brands/hooli.svg
 /var/db/photoprism/assets/static/brands/hornbill.svg
 /var/db/photoprism/assets/static/brands/hotjar.svg
@@ -358,6 +373,7 @@ bin/photoprism
 /var/db/photoprism/assets/static/brands/imdb.svg
 /var/db/photoprism/assets/static/brands/instagram-square.svg
 /var/db/photoprism/assets/static/brands/instagram.svg
+/var/db/photoprism/assets/static/brands/instalod.svg
 /var/db/photoprism/assets/static/brands/intercom.svg
 /var/db/photoprism/assets/static/brands/internet-explorer.svg
 /var/db/photoprism/assets/static/brands/invision.svg
@@ -385,6 +401,7 @@ bin/photoprism
 /var/db/photoprism/assets/static/brands/lastfm.svg
 /var/db/photoprism/assets/static/brands/leanpub.svg
 /var/db/photoprism/assets/static/brands/less.svg
+/var/db/photoprism/assets/static/brands/letterboxd.svg
 /var/db/photoprism/assets/static/brands/line.svg
 /var/db/photoprism/assets/static/brands/linkedin-in.svg
 /var/db/photoprism/assets/static/brands/linkedin.svg
@@ -405,8 +422,10 @@ bin/photoprism
 /var/db/photoprism/assets/static/brands/meetup.svg
 /var/db/photoprism/assets/static/brands/megaport.svg
 /var/db/photoprism/assets/static/brands/mendeley.svg
+/var/db/photoprism/assets/static/brands/meta.svg
 /var/db/photoprism/assets/static/brands/microblog.svg
 /var/db/photoprism/assets/static/brands/microsoft.svg
+/var/db/photoprism/assets/static/brands/mintbit.svg
 /var/db/photoprism/assets/static/brands/mix.svg
 /var/db/photoprism/assets/static/brands/mixcloud.svg
 /var/db/photoprism/assets/static/brands/mixer.svg
@@ -415,27 +434,34 @@ bin/photoprism
 /var/db/photoprism/assets/static/brands/monero.svg
 /var/db/photoprism/assets/static/brands/napster.svg
 /var/db/photoprism/assets/static/brands/neos.svg
+/var/db/photoprism/assets/static/brands/nfc-directional.svg
+/var/db/photoprism/assets/static/brands/nfc-symbol.svg
 /var/db/photoprism/assets/static/brands/nimblr.svg
 /var/db/photoprism/assets/static/brands/node-js.svg
 /var/db/photoprism/assets/static/brands/node.svg
 /var/db/photoprism/assets/static/brands/npm.svg
 /var/db/photoprism/assets/static/brands/ns8.svg
 /var/db/photoprism/assets/static/brands/nutritionix.svg
+/var/db/photoprism/assets/static/brands/octopus-deploy.svg
 /var/db/photoprism/assets/static/brands/odnoklassniki-square.svg
 /var/db/photoprism/assets/static/brands/odnoklassniki.svg
+/var/db/photoprism/assets/static/brands/odysee.svg
 /var/db/photoprism/assets/static/brands/old-republic.svg
 /var/db/photoprism/assets/static/brands/opencart.svg
 /var/db/photoprism/assets/static/brands/openid.svg
+/var/db/photoprism/assets/static/brands/opensuse.svg
 /var/db/photoprism/assets/static/brands/opera.svg
 /var/db/photoprism/assets/static/brands/optin-monster.svg
 /var/db/photoprism/assets/static/brands/orcid.svg
 /var/db/photoprism/assets/static/brands/osi.svg
+/var/db/photoprism/assets/static/brands/padlet.svg
 /var/db/photoprism/assets/static/brands/page4.svg
 /var/db/photoprism/assets/static/brands/pagelines.svg
 /var/db/photoprism/assets/static/brands/palfed.svg
 /var/db/photoprism/assets/static/brands/patreon.svg
 /var/db/photoprism/assets/static/brands/paypal.svg
 /var/db/photoprism/assets/static/brands/penny-arcade.svg
+/var/db/photoprism/assets/static/brands/perbyte.svg
 /var/db/photoprism/assets/static/brands/periscope.svg
 /var/db/photoprism/assets/static/brands/phabricator.svg
 /var/db/photoprism/assets/static/brands/phoenix-framework.svg
@@ -449,6 +475,8 @@ bin/photoprism
 /var/db/photoprism/assets/static/brands/pinterest-p.svg
 /var/db/photoprism/assets/static/brands/pinterest-square.svg
 /var/db/photoprism/assets/static/brands/pinterest.svg
+/var/db/photoprism/assets/static/brands/pix.svg
+/var/db/photoprism/assets/static/brands/pixiv.svg
 /var/db/photoprism/assets/static/brands/playstation.svg
 /var/db/photoprism/assets/static/brands/product-hunt.svg
 /var/db/photoprism/assets/static/brands/pushed.svg
@@ -480,17 +508,21 @@ bin/photoprism
 /var/db/photoprism/assets/static/brands/salesforce.svg
 /var/db/photoprism/assets/static/brands/sass.svg
 /var/db/photoprism/assets/static/brands/schlix.svg
+/var/db/photoprism/assets/static/brands/screenpal.svg
 /var/db/photoprism/assets/static/brands/scribd.svg
 /var/db/photoprism/assets/static/brands/searchengin.svg
 /var/db/photoprism/assets/static/brands/sellcast.svg
 /var/db/photoprism/assets/static/brands/sellsy.svg
 /var/db/photoprism/assets/static/brands/servicestack.svg
 /var/db/photoprism/assets/static/brands/shirtsinbulk.svg
+/var/db/photoprism/assets/static/brands/shoelace.svg
 /var/db/photoprism/assets/static/brands/shopify.svg
 /var/db/photoprism/assets/static/brands/shopware.svg
+/var/db/photoprism/assets/static/brands/signal-messenger.svg
 /var/db/photoprism/assets/static/brands/simplybuilt.svg
 /var/db/photoprism/assets/static/brands/sistrix.svg
 /var/db/photoprism/assets/static/brands/sith.svg
+/var/db/photoprism/assets/static/brands/sitrox.svg
 /var/db/photoprism/assets/static/brands/sketch.svg
 /var/db/photoprism/assets/static/brands/skyatlas.svg
 /var/db/photoprism/assets/static/brands/skype.svg
@@ -502,9 +534,39 @@ bin/photoprism
 /var/db/photoprism/assets/static/brands/snapchat.svg
 /var/db/photoprism/assets/static/brands/soundcloud.svg
 /var/db/photoprism/assets/static/brands/sourcetree.svg
+/var/db/photoprism/assets/static/brands/space-awesome.svg
 /var/db/photoprism/assets/static/brands/speakap.svg
 /var/db/photoprism/assets/static/brands/speaker-deck.svg
 /var/db/photoprism/assets/static/brands/spotify.svg
+/var/db/photoprism/assets/static/brands/square-behance.svg
+/var/db/photoprism/assets/static/brands/square-dribbble.svg
+/var/db/photoprism/assets/static/brands/square-facebook.svg
+/var/db/photoprism/assets/static/brands/square-font-awesome-stroke.svg
+/var/db/photoprism/assets/static/brands/square-font-awesome.svg
+/var/db/photoprism/assets/static/brands/square-git.svg
+/var/db/photoprism/assets/static/brands/square-github.svg
+/var/db/photoprism/assets/static/brands/square-gitlab.svg
+/var/db/photoprism/assets/static/brands/square-google-plus.svg
+/var/db/photoprism/assets/static/brands/square-hacker-news.svg
+/var/db/photoprism/assets/static/brands/square-instagram.svg
+/var/db/photoprism/assets/static/brands/square-js.svg
+/var/db/photoprism/assets/static/brands/square-lastfm.svg
+/var/db/photoprism/assets/static/brands/square-letterboxd.svg
+/var/db/photoprism/assets/static/brands/square-odnoklassniki.svg
+/var/db/photoprism/assets/static/brands/square-pied-piper.svg
+/var/db/photoprism/assets/static/brands/square-pinterest.svg
+/var/db/photoprism/assets/static/brands/square-reddit.svg
+/var/db/photoprism/assets/static/brands/square-snapchat.svg
+/var/db/photoprism/assets/static/brands/square-steam.svg
+/var/db/photoprism/assets/static/brands/square-threads.svg
+/var/db/photoprism/assets/static/brands/square-tumblr.svg
+/var/db/photoprism/assets/static/brands/square-twitter.svg
+/var/db/photoprism/assets/static/brands/square-viadeo.svg
+/var/db/photoprism/assets/static/brands/square-vimeo.svg
+/var/db/photoprism/assets/static/brands/square-whatsapp.svg
+/var/db/photoprism/assets/static/brands/square-x-twitter.svg
+/var/db/photoprism/assets/static/brands/square-xing.svg
+/var/db/photoprism/assets/static/brands/square-youtube.svg
 /var/db/photoprism/assets/static/brands/squarespace.svg
 /var/db/photoprism/assets/static/brands/stack-exchange.svg
 /var/db/photoprism/assets/static/brands/stack-overflow.svg
@@ -517,6 +579,7 @@ bin/photoprism
 /var/db/photoprism/assets/static/brands/strava.svg
 /var/db/photoprism/assets/static/brands/stripe-s.svg
 /var/db/photoprism/assets/static/brands/stripe.svg
+/var/db/photoprism/assets/static/brands/stubber.svg
 /var/db/photoprism/assets/static/brands/studiovinari.svg
 /var/db/photoprism/assets/static/brands/stumbleupon-circle.svg
 /var/db/photoprism/assets/static/brands/stumbleupon.svg
@@ -533,6 +596,7 @@ bin/photoprism
 /var/db/photoprism/assets/static/brands/themeco.svg
 /var/db/photoprism/assets/static/brands/themeisle.svg
 /var/db/photoprism/assets/static/brands/think-peaks.svg
+/var/db/photoprism/assets/static/brands/threads.svg
 /var/db/photoprism/assets/static/brands/tiktok.svg
 /var/db/photoprism/assets/static/brands/trade-federation.svg
 /var/db/photoprism/assets/static/brands/trello.svg
@@ -547,11 +611,13 @@ bin/photoprism
 /var/db/photoprism/assets/static/brands/ubuntu.svg
 /var/db/photoprism/assets/static/brands/uikit.svg
 /var/db/photoprism/assets/static/brands/umbraco.svg
+/var/db/photoprism/assets/static/brands/uncharted.svg
 /var/db/photoprism/assets/static/brands/uniregistry.svg
 /var/db/photoprism/assets/static/brands/unity.svg
 /var/db/photoprism/assets/static/brands/unsplash.svg
 /var/db/photoprism/assets/static/brands/untappd.svg
 /var/db/photoprism/assets/static/brands/ups.svg
+/var/db/photoprism/assets/static/brands/upwork.svg
 /var/db/photoprism/assets/static/brands/usb.svg
 /var/db/photoprism/assets/static/brands/usps.svg
 /var/db/photoprism/assets/static/brands/ussunnah.svg
@@ -567,7 +633,9 @@ bin/photoprism
 /var/db/photoprism/assets/static/brands/vk.svg
 /var/db/photoprism/assets/static/brands/vnv.svg
 /var/db/photoprism/assets/static/brands/vuejs.svg
+/var/db/photoprism/assets/static/brands/watchman-monitoring.svg
 /var/db/photoprism/assets/static/brands/waze.svg
+/var/db/photoprism/assets/static/brands/webflow.svg
 /var/db/photoprism/assets/static/brands/weebly.svg
 /var/db/photoprism/assets/static/brands/weibo.svg
 /var/db/photoprism/assets/static/brands/weixin.svg
@@ -576,8 +644,10 @@ bin/photoprism
 /var/db/photoprism/assets/static/brands/whmcs.svg
 /var/db/photoprism/assets/static/brands/wikipedia-w.svg
 /var/db/photoprism/assets/static/brands/windows.svg
+/var/db/photoprism/assets/static/brands/wirsindhandwerk.svg
 /var/db/photoprism/assets/static/brands/wix.svg
 /var/db/photoprism/assets/static/brands/wizards-of-the-coast.svg
+/var/db/photoprism/assets/static/brands/wodu.svg
 /var/db/photoprism/assets/static/brands/wolf-pack-battalion.svg
 /var/db/photoprism/assets/static/brands/wordpress-simple.svg
 /var/db/photoprism/assets/static/brands/wordpress.svg
@@ -585,6 +655,7 @@ bin/photoprism
 /var/db/photoprism/assets/static/brands/wpexplorer.svg
 /var/db/photoprism/assets/static/brands/wpforms.svg
 /var/db/photoprism/assets/static/brands/wpressr.svg
+/var/db/photoprism/assets/static/brands/x-twitter.svg
 /var/db/photoprism/assets/static/brands/xbox.svg
 /var/db/photoprism/assets/static/brands/xing-square.svg
 /var/db/photoprism/assets/static/brands/xing.svg
@@ -605,12 +676,12 @@ bin/photoprism
 /var/db/photoprism/assets/static/build/2d8017489da689caedc1.woff2
 /var/db/photoprism/assets/static/build/698bd8550d863c20a3e1.ttf
 /var/db/photoprism/assets/static/build/af9a28e7f261a412f581.eot
-/var/db/photoprism/assets/static/build/app.13ec72dcc1867e2fbc4a.css
-/var/db/photoprism/assets/static/build/app.a78b59a6f251510fde54.js
-/var/db/photoprism/assets/static/build/app.a78b59a6f251510fde54.js.LICENSE.txt
+/var/db/photoprism/assets/static/build/app.8b1f99a4e4cb2f44bacf.css
+/var/db/photoprism/assets/static/build/app.c70129c9a0c97d73c816.js
+/var/db/photoprism/assets/static/build/app.c70129c9a0c97d73c816.js.LICENSE.txt
 /var/db/photoprism/assets/static/build/assets.json
 /var/db/photoprism/assets/static/build/f64c3af3d0d25b9e4e00.svg
-/var/db/photoprism/assets/static/build/share.572c89a0f5ef0cf8eef7.js
+/var/db/photoprism/assets/static/build/share.3cd68692f3ac46d151e9.js
 /var/db/photoprism/assets/static/build/sw.js
 /var/db/photoprism/assets/static/font/Open Sans Bold/0-255.pbf
 /var/db/photoprism/assets/static/font/Open Sans Bold/1024-1279.pbf
@@ -1872,7 +1943,7 @@ bin/photoprism
 /var/db/photoprism/assets/static/img/logo-white.svg
 /var/db/photoprism/assets/static/img/logo.svg
 /var/db/photoprism/assets/static/img/preview.jpg
-/var/db/photoprism/assets/static/img/wallpaper/kashmir.jpg
+/var/db/photoprism/assets/static/img/wallpaper/default.jpg
 /var/db/photoprism/assets/static/plugins/maplibre-gl-rtl-text/v0.2.3/maplibre-gl-rtl-text.js
 /var/db/photoprism/assets/static/video/404.mp4
 /var/db/photoprism/assets/templates/404.gohtml
@@ -1928,6 +1999,7 @@ bin/photoprism
 @dir /var/db/photoprism/assets/locales/th
 @dir /var/db/photoprism/assets/locales/tr
 @dir /var/db/photoprism/assets/locales/uk
+@dir /var/db/photoprism/assets/locales/vi
 @dir /var/db/photoprism/assets/locales/zh
 @dir /var/db/photoprism/assets/locales/zh_TW
 @dir /var/db/photoprism/assets/locales
