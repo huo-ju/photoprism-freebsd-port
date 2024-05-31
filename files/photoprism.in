@@ -19,12 +19,16 @@ load_rc_config $name
 
 : ${photoprism_enable="NO"}
 
-export PHOTOPRISM_AUTH_MODE=${photoprism_auth_mode}
+if [ "$photoprism_auth_mode" ]; then photoprism_args="${photoprism_args} --auth-mode=${photoprism_auth_mode}"; fi
+if [ "$photoprism_defaultsyaml" ]; then photoprism_args="${photoprism_args} --defaults-yaml=${photoprism_defaultsyaml}"; fi
+if [ "$photoprism_assetspath" ]; then photoprism_args="${photoprism_args} --assets-path=${photoprism_assetspath}"; fi
+if [ "$photoprism_storagepath" ]; then 
+  photoprism_args="${photoprism_args} --storage-path=${photoprism_storagepath} --originals-path=${photoprism_storagepath}/originals --import-path=${photoprism_storagepath}/import"
+fi
 
 pidfile="/var/run/photoprism.pid"
 procname="/usr/local/bin/photoprism"
 command="/usr/sbin/daemon"
-command_args="-f -T photoprism -p ${pidfile} -u photoprism /usr/local/bin/photoprism --defaults-yaml=${photoprism_defaultsyaml} --assets-path=${photoprism_assetspath} --storage-path=${photoprism_storagepath} --originals-path=${photoprism_storagepath}/originals --import-path=${photoprism_storagepath}/import ${photoprism_args} start"
+command_args="-f -T photoprism -p ${pidfile} -u photoprism /usr/local/bin/photoprism ${photoprism_args} start"
 
 run_rc_command "$1"
-
