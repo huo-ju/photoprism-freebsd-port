@@ -1,4 +1,5 @@
 bin/photoprism
+etc/rc.d/photoprism
 /var/db/photoprism/assets/.buildignore
 /var/db/photoprism/assets/README
 /var/db/photoprism/assets/examples/.photoprism/example.jpg
@@ -341,6 +342,7 @@ bin/photoprism
 /var/db/photoprism/assets/static/brands/golang.svg
 /var/db/photoprism/assets/static/brands/goodreads-g.svg
 /var/db/photoprism/assets/static/brands/goodreads.svg
+/var/db/photoprism/assets/static/brands/google-color.svg
 /var/db/photoprism/assets/static/brands/google-drive.svg
 /var/db/photoprism/assets/static/brands/google-pay.svg
 /var/db/photoprism/assets/static/brands/google-play.svg
@@ -676,12 +678,12 @@ bin/photoprism
 /var/db/photoprism/assets/static/build/2d8017489da689caedc1.woff2
 /var/db/photoprism/assets/static/build/698bd8550d863c20a3e1.ttf
 /var/db/photoprism/assets/static/build/af9a28e7f261a412f581.eot
-/var/db/photoprism/assets/static/build/app.8b1f99a4e4cb2f44bacf.css
-/var/db/photoprism/assets/static/build/app.c70129c9a0c97d73c816.js
-/var/db/photoprism/assets/static/build/app.c70129c9a0c97d73c816.js.LICENSE.txt
+/var/db/photoprism/assets/static/build/app.1727d6ad9ff7e01d3bf5.js
+/var/db/photoprism/assets/static/build/app.1727d6ad9ff7e01d3bf5.js.LICENSE.txt
+/var/db/photoprism/assets/static/build/app.fc3e74d7360094f1a4f9.css
 /var/db/photoprism/assets/static/build/assets.json
 /var/db/photoprism/assets/static/build/f64c3af3d0d25b9e4e00.svg
-/var/db/photoprism/assets/static/build/share.3cd68692f3ac46d151e9.js
+/var/db/photoprism/assets/static/build/share.9e32a8334b90c4bf11f3.js
 /var/db/photoprism/assets/static/build/sw.js
 /var/db/photoprism/assets/static/font/Open Sans Bold/0-255.pbf
 /var/db/photoprism/assets/static/font/Open Sans Bold/1024-1279.pbf
@@ -1942,12 +1944,14 @@ bin/photoprism
 /var/db/photoprism/assets/static/img/logo-white-text.svg
 /var/db/photoprism/assets/static/img/logo-white.svg
 /var/db/photoprism/assets/static/img/logo.svg
+/var/db/photoprism/assets/static/img/oidc.svg
 /var/db/photoprism/assets/static/img/preview.jpg
 /var/db/photoprism/assets/static/img/wallpaper/default.jpg
 /var/db/photoprism/assets/static/plugins/maplibre-gl-rtl-text/v0.2.3/maplibre-gl-rtl-text.js
 /var/db/photoprism/assets/static/video/404.mp4
 /var/db/photoprism/assets/templates/404.gohtml
 /var/db/photoprism/assets/templates/app.gohtml
+/var/db/photoprism/assets/templates/auth.gohtml
 /var/db/photoprism/assets/templates/favicons.gohtml
 /var/db/photoprism/assets/templates/index.gohtml
 /var/db/photoprism/assets/templates/logo.gohtml
