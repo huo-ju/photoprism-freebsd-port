@@ -26,6 +26,13 @@ cd photoprism-freebsd-port
 make && make install
 ```
 
+### Upgrade from an old version
+```
+cd photoprism-freebsd-port
+git pull
+make reinstall clean
+```
+
 ### Poudriere
 
 If you are using poudriere to build the port, you will need to set the
