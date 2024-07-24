@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	photoprism
-DISTVERSION=	g20240420
+DISTVERSION=	g20240711
 CATEGORIES=	www
 
 MAINTAINER=	huoju@devep.net
@@ -11,7 +11,8 @@ LICENSE=	AGPLv3
 
 RUN_DEPENDS=  ffmpeg:multimedia/ffmpeg \
 	exiftool:graphics/p5-Image-ExifTool \
-        libheif>=1.14.2:graphics/libheif
+        libheif>=1.14.2:graphics/libheif \
+	vips>=8.10:graphics/vips
 
 LIB_DEPENDS=	libtensorflow.so.1:science/libtensorflow1
 
@@ -20,7 +21,8 @@ EXTRACT_DEPENDS=  ${RUN_DEPENDS} \
 	git:devel/git \
 	gmake:devel/gmake \
 	npm:www/npm-node18 \
-	wget:ftp/wget:1.21+
+	wget:ftp/wget:1.21+ \
+	pkg-config:devel/pkgconf
 
 BUILD_DEPENDS= ${EXTRACT_DEPENDS} 
 
@@ -29,7 +31,7 @@ USES= gmake go:1.21,modules python:3.6+,build
 USE_GITHUB=	yes
 GH_ACCOUNT=	photoprism
 GH_PROJECT=	photoprism
-GH_TAGNAME=     240420-ef5f14bc4
+GH_TAGNAME=     240711-2197af848
 
 USE_RC_SUBR=    photoprism
 PHOTOPRISM_DATA_DIR=      /var/db/photoprism
