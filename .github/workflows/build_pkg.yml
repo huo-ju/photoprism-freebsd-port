@@ -1,9 +1,7 @@
 name: Create Binary Pkg
 
 on:
-  push:
-    branches:
-      - main
+  workflow_call:
 
 jobs:
   build_14:
@@ -23,6 +21,7 @@ jobs:
           run: |
             git config --global --add safe.directory /home/runner/work/photoprism-freebsd-port/photoprism-freebsd-port
             make package
+            for file in work/pkg/*.pkg;do mv $file ${file//\.pkg/-FreeBSD-$(uname -r).pkg}; done
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -47,6 +46,7 @@ jobs:
           run: |
             git config --global --add safe.directory /home/runner/work/photoprism-freebsd-port/photoprism-freebsd-port
             make package
+            for file in work/pkg/*.pkg;do mv $file ${file//\.pkg/-FreeBSD-$(uname -r).pkg}; done
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
