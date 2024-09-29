@@ -2,6 +2,7 @@ name: Update Latest
 
 on:
   workflow_dispatch:
+  push:
 
 
 jobs:
