@@ -1,0 +1,16 @@
+name: Update Latest
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+  UpdateToLatest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - id: getRelease
+        uses: pozetroninc/github-action-get-latest-release@master
+        with:
+          repository: photoprism/photoprism
+      - run: echo "Latest release is ${{ steps.getRelease.outputs.release }}"
