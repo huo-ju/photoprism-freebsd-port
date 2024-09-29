@@ -1,4 +1,5 @@
 bin/photoprism
+etc/rc.d/photoprism
 /var/db/photoprism/assets/.buildignore
 /var/db/photoprism/assets/README
 /var/db/photoprism/assets/examples/.photoprism/example.jpg
@@ -112,6 +113,7 @@ bin/photoprism
 /var/db/photoprism/assets/locales/fa/default.po
 /var/db/photoprism/assets/locales/fi/default.po
 /var/db/photoprism/assets/locales/fr/default.po
+/var/db/photoprism/assets/locales/ga/default.po
 /var/db/photoprism/assets/locales/he/default.po
 /var/db/photoprism/assets/locales/hi/default.po
 /var/db/photoprism/assets/locales/hr/default.po
@@ -677,12 +679,12 @@ bin/photoprism
 /var/db/photoprism/assets/static/build/2d8017489da689caedc1.woff2
 /var/db/photoprism/assets/static/build/698bd8550d863c20a3e1.ttf
 /var/db/photoprism/assets/static/build/af9a28e7f261a412f581.eot
-/var/db/photoprism/assets/static/build/app.1727d6ad9ff7e01d3bf5.js
-/var/db/photoprism/assets/static/build/app.1727d6ad9ff7e01d3bf5.js.LICENSE.txt
-/var/db/photoprism/assets/static/build/app.fc3e74d7360094f1a4f9.css
+/var/db/photoprism/assets/static/build/app.405beb33c06fe9d84f44.css
+/var/db/photoprism/assets/static/build/app.7c8896e06308b4527cda.js
+/var/db/photoprism/assets/static/build/app.7c8896e06308b4527cda.js.LICENSE.txt
 /var/db/photoprism/assets/static/build/assets.json
 /var/db/photoprism/assets/static/build/f64c3af3d0d25b9e4e00.svg
-/var/db/photoprism/assets/static/build/share.9e32a8334b90c4bf11f3.js
+/var/db/photoprism/assets/static/build/share.73a026001890c81ab641.js
 /var/db/photoprism/assets/static/build/sw.js
 /var/db/photoprism/assets/static/font/Open Sans Bold/0-255.pbf
 /var/db/photoprism/assets/static/font/Open Sans Bold/1024-1279.pbf
@@ -698,7 +700,7 @@ bin/photoprism
 /var/db/photoprism/assets/static/font/Open Sans Bold/12544-12799.pbf
 /var/db/photoprism/assets/static/font/Open Sans Bold/1280-1535.pbf
 /var/db/photoprism/assets/static/font/Open Sans Bold/12800-13055.pbf
-/var/db/photoprism/assets/static/font/Open Sans Bold/13056-13311.pbf
+/var/db/photoprism/assets/static/font/Open Sans Bold/13056-13%%PYTHON_SUFFIX%%.pbf
 /var/db/photoprism/assets/static/font/Open Sans Bold/13312-13567.pbf
 /var/db/photoprism/assets/static/font/Open Sans Bold/13568-13823.pbf
 /var/db/photoprism/assets/static/font/Open Sans Bold/13824-14079.pbf
@@ -836,7 +838,7 @@ bin/photoprism
 /var/db/photoprism/assets/static/font/Open Sans Bold/44288-44543.pbf
 /var/db/photoprism/assets/static/font/Open Sans Bold/44544-44799.pbf
 /var/db/photoprism/assets/static/font/Open Sans Bold/44800-45055.pbf
-/var/db/photoprism/assets/static/font/Open Sans Bold/45056-45311.pbf
+/var/db/photoprism/assets/static/font/Open Sans Bold/45056-45%%PYTHON_SUFFIX%%.pbf
 /var/db/photoprism/assets/static/font/Open Sans Bold/45312-45567.pbf
 /var/db/photoprism/assets/static/font/Open Sans Bold/45568-45823.pbf
 /var/db/photoprism/assets/static/font/Open Sans Bold/45824-46079.pbf
@@ -954,7 +956,7 @@ bin/photoprism
 /var/db/photoprism/assets/static/font/Open Sans Italic/12544-12799.pbf
 /var/db/photoprism/assets/static/font/Open Sans Italic/1280-1535.pbf
 /var/db/photoprism/assets/static/font/Open Sans Italic/12800-13055.pbf
-/var/db/photoprism/assets/static/font/Open Sans Italic/13056-13311.pbf
+/var/db/photoprism/assets/static/font/Open Sans Italic/13056-13%%PYTHON_SUFFIX%%.pbf
 /var/db/photoprism/assets/static/font/Open Sans Italic/13312-13567.pbf
 /var/db/photoprism/assets/static/font/Open Sans Italic/13568-13823.pbf
 /var/db/photoprism/assets/static/font/Open Sans Italic/13824-14079.pbf
@@ -1092,7 +1094,7 @@ bin/photoprism
 /var/db/photoprism/assets/static/font/Open Sans Italic/44288-44543.pbf
 /var/db/photoprism/assets/static/font/Open Sans Italic/44544-44799.pbf
 /var/db/photoprism/assets/static/font/Open Sans Italic/44800-45055.pbf
-/var/db/photoprism/assets/static/font/Open Sans Italic/45056-45311.pbf
+/var/db/photoprism/assets/static/font/Open Sans Italic/45056-45%%PYTHON_SUFFIX%%.pbf
 /var/db/photoprism/assets/static/font/Open Sans Italic/45312-45567.pbf
 /var/db/photoprism/assets/static/font/Open Sans Italic/45568-45823.pbf
 /var/db/photoprism/assets/static/font/Open Sans Italic/45824-46079.pbf
@@ -1210,7 +1212,7 @@ bin/photoprism
 /var/db/photoprism/assets/static/font/Open Sans Regular/12544-12799.pbf
 /var/db/photoprism/assets/static/font/Open Sans Regular/1280-1535.pbf
 /var/db/photoprism/assets/static/font/Open Sans Regular/12800-13055.pbf
-/var/db/photoprism/assets/static/font/Open Sans Regular/13056-13311.pbf
+/var/db/photoprism/assets/static/font/Open Sans Regular/13056-13%%PYTHON_SUFFIX%%.pbf
 /var/db/photoprism/assets/static/font/Open Sans Regular/13312-13567.pbf
 /var/db/photoprism/assets/static/font/Open Sans Regular/13568-13823.pbf
 /var/db/photoprism/assets/static/font/Open Sans Regular/13824-14079.pbf
@@ -1348,7 +1350,7 @@ bin/photoprism
 /var/db/photoprism/assets/static/font/Open Sans Regular/44288-44543.pbf
 /var/db/photoprism/assets/static/font/Open Sans Regular/44544-44799.pbf
 /var/db/photoprism/assets/static/font/Open Sans Regular/44800-45055.pbf
-/var/db/photoprism/assets/static/font/Open Sans Regular/45056-45311.pbf
+/var/db/photoprism/assets/static/font/Open Sans Regular/45056-45%%PYTHON_SUFFIX%%.pbf
 /var/db/photoprism/assets/static/font/Open Sans Regular/45312-45567.pbf
 /var/db/photoprism/assets/static/font/Open Sans Regular/45568-45823.pbf
 /var/db/photoprism/assets/static/font/Open Sans Regular/45824-46079.pbf
@@ -1466,7 +1468,7 @@ bin/photoprism
 /var/db/photoprism/assets/static/font/Open Sans Semibold/12544-12799.pbf
 /var/db/photoprism/assets/static/font/Open Sans Semibold/1280-1535.pbf
 /var/db/photoprism/assets/static/font/Open Sans Semibold/12800-13055.pbf
-/var/db/photoprism/assets/static/font/Open Sans Semibold/13056-13311.pbf
+/var/db/photoprism/assets/static/font/Open Sans Semibold/13056-13%%PYTHON_SUFFIX%%.pbf
 /var/db/photoprism/assets/static/font/Open Sans Semibold/13312-13567.pbf
 /var/db/photoprism/assets/static/font/Open Sans Semibold/13568-13823.pbf
 /var/db/photoprism/assets/static/font/Open Sans Semibold/13824-14079.pbf
@@ -1604,7 +1606,7 @@ bin/photoprism
 /var/db/photoprism/assets/static/font/Open Sans Semibold/44288-44543.pbf
 /var/db/photoprism/assets/static/font/Open Sans Semibold/44544-44799.pbf
 /var/db/photoprism/assets/static/font/Open Sans Semibold/44800-45055.pbf
-/var/db/photoprism/assets/static/font/Open Sans Semibold/45056-45311.pbf
+/var/db/photoprism/assets/static/font/Open Sans Semibold/45056-45%%PYTHON_SUFFIX%%.pbf
 /var/db/photoprism/assets/static/font/Open Sans Semibold/45312-45567.pbf
 /var/db/photoprism/assets/static/font/Open Sans Semibold/45568-45823.pbf
 /var/db/photoprism/assets/static/font/Open Sans Semibold/45824-46079.pbf
@@ -1978,6 +1980,7 @@ bin/photoprism
 @dir /var/db/photoprism/assets/locales/fa
 @dir /var/db/photoprism/assets/locales/fi
 @dir /var/db/photoprism/assets/locales/fr
+@dir /var/db/photoprism/assets/locales/ga
 @dir /var/db/photoprism/assets/locales/he
 @dir /var/db/photoprism/assets/locales/hi
 @dir /var/db/photoprism/assets/locales/hr

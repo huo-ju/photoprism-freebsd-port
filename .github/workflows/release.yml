@@ -1,0 +1,53 @@
+name: Release
+
+on:
+  workflow_dispatch:
+  release:
+    types:
+      - published
+  workflow_run:
+    workflows: ["Update Latest"]
+    types: [completed]
+
+
+jobs:
+  Build_Packages:
+    name: Build Packages
+    secrets: inherit
+    permissions:
+      contents: write
+      checks: write
+      actions: read
+      issues: read
+      packages: write
+      pull-requests: read
+      repository-projects: read
+      statuses: read
+    uses: ./.github/workflows/build_pkg.yml
+  Upload_Artifacts:
+    name: Upload to release artifacts
+    needs: Build_Packages
+    permissions:
+      contents: write
+      checks: write
+      actions: read
+      issues: read
+      packages: write
+      pull-requests: read
+      repository-projects: read
+      statuses: read
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: freebsd-14
+          path: target/
+      - uses: actions/download-artifact@v4
+        with:
+          name: freebsd-13
+          path: target/
+      - uses: alexellis/upload-assets@0.4.1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          asset_paths: '[ "target/*.pkg" ]'
