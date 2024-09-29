@@ -38,6 +38,7 @@ jobs:
         uses: vmactions/freebsd-vm@v1
         with:
           usesh: true
+          release: "13.3"
           prepare: |
             pkg install -y gmake npm wget pkgconf git go122 ffmpeg p5-Image-ExifTool libheif vips bsddialog portconfig
             mkdir -p /var/db/portsnap && portsnap --interactive auto > /dev/null
