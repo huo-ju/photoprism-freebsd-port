@@ -9,6 +9,7 @@ on:
 
 jobs:
   Build_Packages:
+    name: Build Packages
     secrets: inherit
     permissions:
       contents: write
@@ -21,6 +22,7 @@ jobs:
       statuses: read
     uses: ./.github/workflows/build_pkg.yml
   Upload_Artifacts:
+    name: Upload to release artifacts
     needs: Build_Packages
     permissions:
       contents: write
