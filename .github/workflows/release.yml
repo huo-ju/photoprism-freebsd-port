@@ -5,6 +5,9 @@ on:
   release:
     types:
       - published
+  workflow_run:
+    workflows: ["Update Latest"]
+    types: [completed]
 
 
 jobs:
