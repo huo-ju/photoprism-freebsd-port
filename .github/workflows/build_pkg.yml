@@ -1,0 +1,54 @@
+name: Create Binary Pkg
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_14:
+    name: Build for FreeBSD 14
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build PKG
+        uses: vmactions/freebsd-vm@v1
+        with:
+          usesh: true
+          prepare: |
+            pkg install -y gmake npm wget pkgconf git go122 portsnap ffmpeg p5-Image-ExifTool libheif vips bsddialog portconfig
+            mkdir -p /var/db/portsnap && portsnap --interactive auto > /dev/null
+            fetch https://github.com/lapo-luchini/libtensorflow1-freebsd-port/releases/download/v1.15.5_2/libtensorflow1-1.15.5_2.pkg-FreeBSD-14.0-amd64-AVX-SSE42.pkg -o /tmp/libtf.pkg
+            pkg add /tmp/libtf.pkg
+          run: |
+            git config --global --add safe.directory /home/runner/work/photoprism-freebsd-port/photoprism-freebsd-port
+            make package
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: freebsd-14
+          path: |
+            work/pkg/*.pkg
+  build_13:
+    name: Build for FreeBSD 13
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build PKG
+        uses: vmactions/freebsd-vm@v1
+        with:
+          usesh: true
+          prepare: |
+            pkg install -y gmake npm wget pkgconf git go122 ffmpeg p5-Image-ExifTool libheif vips bsddialog portconfig
+            mkdir -p /var/db/portsnap && portsnap --interactive auto > /dev/null
+            fetch https://github.com/lapo-luchini/libtensorflow1-freebsd-port/releases/download/v1.15.5_2/libtensorflow1-1.15.5_2.pkg-FreeBSD-13.2-amd64-AVX-SSE42.pkg -o /tmp/libtf.pkg
+            pkg add /tmp/libtf.pkg
+          run: |
+            git config --global --add safe.directory /home/runner/work/photoprism-freebsd-port/photoprism-freebsd-port
+            make package
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: freebsd-13
+          path: |
+            work/pkg/*.pkg

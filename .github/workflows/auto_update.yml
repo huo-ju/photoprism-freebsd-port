@@ -3,18 +3,43 @@ name: Update Latest
 on:
   workflow_dispatch:
 
-
 jobs:
   UpdateToLatest:
+    name: Update to Latest
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - id: getRelease
+        name: Fetch latest release
         uses: pozetroninc/github-action-get-latest-release@master
         with:
           repository: photoprism/photoprism
-      - run: |
-          VERSION=`echo "${{ steps.getRelease.outputs.release }}"|cut -d "-" -f 1``
-          sed -i "s/DISTVERSION=.*/DISTVERSION=g${VERSION}/g" Makefile
-          sed -i "s/GH_TAGNAME=.*/GH_TAGNAME=${{ steps.getRelease.outputs.release }}/g" Makefile
-          cat Makefile
+      - name: Update Makefile
+        run: |
+          export VERSION=`echo "${{ steps.getRelease.outputs.release }}"|cut -d "-" -f 1`
+          sed -i "s/DISTVERSION=.*/DISTVERSION=	g20${VERSION}/g" Makefile
+          sed -i "s/GH_TAGNAME=.*/GH_TAGNAME=	${{ steps.getRelease.outputs.release }}/g" Makefile
+      - name: Build The Latest
+        uses: vmactions/freebsd-vm@v1
+        with:
+          usesh: true
+          prepare: |
+            pkg install -y gmake npm wget pkgconf git go122 portsnap ffmpeg p5-Image-ExifTool libheif vips bsddialog portconfig
+            mkdir -p /var/db/portsnap && portsnap --interactive auto > /dev/null
+            fetch https://github.com/lapo-luchini/libtensorflow1-freebsd-port/releases/download/v1.15.5_2/libtensorflow1-1.15.5_2.pkg-FreeBSD-14.0-amd64-AVX-SSE42.pkg -o /tmp/libtf.pkg
+            pkg add /tmp/libtf.pkg
+          run: |
+            git config --global --add safe.directory /home/runner/work/photoprism-freebsd-port/photoprism-freebsd-port
+            make makesum
+            make -j $(nproc)
+            make makeplist >pkg-plist
+            tail -n +2 pkg-plist >pkg-plist.tmp
+            mv pkg-plist.tmp pkg-plist
+      - name: Show diff
+        run: git diff
+      - name: Commit and push
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "[Auto update] Update to ${{ steps.getRelease.outputs.release }}"
