@@ -43,3 +43,9 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "[Auto update] Update to ${{ steps.getRelease.outputs.release }}"
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          body: Photoprism ${{ steps.getRelease.outputs.release }} packages for FreeBSD
+          tag_name: ${{ steps.getRelease.outputs.release }}
+          name: ${{ steps.getRelease.outputs.release }}
