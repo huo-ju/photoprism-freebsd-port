@@ -20,7 +20,7 @@ jobs:
           run: |
             git config --global --add safe.directory /home/runner/work/photoprism-freebsd-port/photoprism-freebsd-port
             make package
-            python3 -c "import glob, os; [os.rename(f, f.replace('.pkg', '-FreeBSD-' + os.uname().release + '.pkg')) for f in glob.glob('work/pkg/*.pkg')]"
+            python3.11 -c "import glob, os; [os.rename(f, f.replace('.pkg', '-FreeBSD-' + os.uname().release + '.pkg')) for f in glob.glob('work/pkg/*.pkg')]"
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -44,7 +44,7 @@ jobs:
           run: |
             git config --global --add safe.directory /home/runner/work/photoprism-freebsd-port/photoprism-freebsd-port
             make package
-            python3 -c "import glob, os; [os.rename(f, f.replace('.pkg', '-FreeBSD-' + os.uname().release + '.pkg')) for f in glob.glob('work/pkg/*.pkg')]"
+            python3.11 -c "import glob, os; [os.rename(f, f.replace('.pkg', '-FreeBSD-' + os.uname().release + '.pkg')) for f in glob.glob('work/pkg/*.pkg')]"
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
