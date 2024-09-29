@@ -13,4 +13,8 @@ jobs:
         uses: pozetroninc/github-action-get-latest-release@master
         with:
           repository: photoprism/photoprism
-      - run: echo "Latest release is ${{ steps.getRelease.outputs.release }}"
+      - run: |
+          VERSION=`echo "${{ steps.getRelease.outputs.release }}"|cut -d "-" -f 1``
+          sed -i "s/DISTVERSION=.*/DISTVERSION=g${VERSION}/g" Makefile
+          sed -i "s/GH_TAGNAME=.*/GH_TAGNAME=${{ steps.getRelease.outputs.release }}/g" Makefile
+          cat Makefile
