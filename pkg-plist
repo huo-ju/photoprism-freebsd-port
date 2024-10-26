@@ -1,5 +1,4 @@
 bin/photoprism
-etc/rc.d/photoprism
 /var/db/photoprism/assets/.buildignore
 /var/db/photoprism/assets/README
 /var/db/photoprism/assets/examples/.photoprism/example.jpg
@@ -680,8 +679,8 @@ etc/rc.d/photoprism
 /var/db/photoprism/assets/static/build/698bd8550d863c20a3e1.ttf
 /var/db/photoprism/assets/static/build/af9a28e7f261a412f581.eot
 /var/db/photoprism/assets/static/build/app.405beb33c06fe9d84f44.css
-/var/db/photoprism/assets/static/build/app.7c8896e06308b4527cda.js
-/var/db/photoprism/assets/static/build/app.7c8896e06308b4527cda.js.LICENSE.txt
+/var/db/photoprism/assets/static/build/app.5ccce82b4f1d67b05b3c.js
+/var/db/photoprism/assets/static/build/app.5ccce82b4f1d67b05b3c.js.LICENSE.txt
 /var/db/photoprism/assets/static/build/assets.json
 /var/db/photoprism/assets/static/build/f64c3af3d0d25b9e4e00.svg
 /var/db/photoprism/assets/static/build/share.73a026001890c81ab641.js
