@@ -1,22 +1,22 @@
-# $FreeBSD$
-
 PORTNAME=	photoprism
 DISTVERSION=	g20240915
 CATEGORIES=	www
 
 MAINTAINER=	huoju@devep.net
 COMMENT=	Personal Photo Management Web Service
+WWW=		https://photoprism.app
 
 LICENSE=	AGPLv3
 
-RUN_DEPENDS=  ffmpeg:multimedia/ffmpeg \
+RUN_DEPENDS=	ffmpeg:multimedia/ffmpeg \
 	exiftool:graphics/p5-Image-ExifTool \
-        libheif>=1.14.2:graphics/libheif \
+	libheif>=1.14.2:graphics/libheif \
 	vips>=8.10:graphics/vips
 
 LIB_DEPENDS=	libtensorflow.so.1:science/libtensorflow1
 
-EXTRACT_DEPENDS=  ${RUN_DEPENDS} \
+EXTRACT_DEPENDS=	\
+	${RUN_DEPENDS} \
 	bash:shells/bash \
 	git:devel/git \
 	gmake:devel/gmake \
@@ -24,19 +24,19 @@ EXTRACT_DEPENDS=  ${RUN_DEPENDS} \
 	wget:ftp/wget:1.21+ \
 	pkg-config:devel/pkgconf
 
-BUILD_DEPENDS= ${EXTRACT_DEPENDS} 
+BUILD_DEPENDS=	${EXTRACT_DEPENDS}
 
-USES= gmake go:1.22,modules python:3.6+,build
+USES=		gmake go:1.22,modules python:3.6+,build
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	photoprism
 GH_PROJECT=	photoprism
 GH_TAGNAME=	240915-e1280b2fb
 
-USE_RC_SUBR=    photoprism
-PHOTOPRISM_DATA_DIR=      /var/db/photoprism
-SUB_LIST+=      PHOTOPRISM_DATA_DIR=${PHOTOPRISM_DATA_DIR}
-SUB_FILES+=      pkg-install pkg-message
+USE_RC_SUBR=	photoprism
+PHOTOPRISM_DATA_DIR=	/var/db/photoprism
+SUB_LIST+=	PHOTOPRISM_DATA_DIR=${PHOTOPRISM_DATA_DIR}
+SUB_FILES+=	pkg-install pkg-message
 
 BUILD_OS!=uname -s
 BUILD_DATE!=date -u +%y%m%d
