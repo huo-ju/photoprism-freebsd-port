@@ -62,6 +62,7 @@ bin/photoprism
 /var/db/photoprism/assets/examples/iphone_7.heic
 /var/db/photoprism/assets/examples/iphone_7.json
 /var/db/photoprism/assets/examples/iphone_7.xmp
+/var/db/photoprism/assets/examples/iphone_xr.jpg
 /var/db/photoprism/assets/examples/jellyfish_blue.jpg
 /var/db/photoprism/assets/examples/leaves_gold.jpg
 /var/db/photoprism/assets/examples/limes.jpg
@@ -672,18 +673,18 @@ bin/photoprism
 /var/db/photoprism/assets/static/brands/youtube-square.svg
 /var/db/photoprism/assets/static/brands/youtube.svg
 /var/db/photoprism/assets/static/brands/zhihu.svg
-/var/db/photoprism/assets/static/build/08cefa1bc6566a650da7.woff
-/var/db/photoprism/assets/static/build/0ff4d62150facee6b7de.png
-/var/db/photoprism/assets/static/build/14d740b6ee64510747b0.gif
-/var/db/photoprism/assets/static/build/2d8017489da689caedc1.woff2
-/var/db/photoprism/assets/static/build/698bd8550d863c20a3e1.ttf
-/var/db/photoprism/assets/static/build/af9a28e7f261a412f581.eot
-/var/db/photoprism/assets/static/build/app.405beb33c06fe9d84f44.css
-/var/db/photoprism/assets/static/build/app.5ccce82b4f1d67b05b3c.js
-/var/db/photoprism/assets/static/build/app.5ccce82b4f1d67b05b3c.js.LICENSE.txt
+/var/db/photoprism/assets/static/build/1fcc36272ea3e53d0031.ttf
+/var/db/photoprism/assets/static/build/2146c3c82b553977abc7.eot
+/var/db/photoprism/assets/static/build/app.1c438f787e764f8a50bd.js
+/var/db/photoprism/assets/static/build/app.1c438f787e764f8a50bd.js.LICENSE.txt
+/var/db/photoprism/assets/static/build/app.327016a711d0f4fe11e4.css
 /var/db/photoprism/assets/static/build/assets.json
-/var/db/photoprism/assets/static/build/f64c3af3d0d25b9e4e00.svg
-/var/db/photoprism/assets/static/build/share.73a026001890c81ab641.js
+/var/db/photoprism/assets/static/build/e55a20c80650829ec5fd.woff
+/var/db/photoprism/assets/static/build/ec024da790d2972da002.woff2
+/var/db/photoprism/assets/static/build/share.3f719b7674a173b1e8dc.js
+/var/db/photoprism/assets/static/build/share.3f719b7674a173b1e8dc.js.LICENSE.txt
+/var/db/photoprism/assets/static/build/splash.31d6cfe0d16ae931b73c.js
+/var/db/photoprism/assets/static/build/splash.3374b23705fb60749d33.css
 /var/db/photoprism/assets/static/build/sw.js
 /var/db/photoprism/assets/static/font/Open Sans Bold/0-255.pbf
 /var/db/photoprism/assets/static/font/Open Sans Bold/1024-1279.pbf
@@ -1955,11 +1956,13 @@ bin/photoprism
 /var/db/photoprism/assets/templates/favicons.gohtml
 /var/db/photoprism/assets/templates/index.gohtml
 /var/db/photoprism/assets/templates/logo.gohtml
+/var/db/photoprism/assets/templates/manifest.gohtml
 /var/db/photoprism/assets/templates/minimal.gohtml
 /var/db/photoprism/assets/templates/quotes.gohtml
 /var/db/photoprism/assets/templates/rainbow.gohtml
 /var/db/photoprism/assets/templates/share.gohtml
 /var/db/photoprism/assets/templates/splash.gohtml
+/var/db/photoprism/assets/templates/styles.gohtml
 @dir /var/db/photoprism/assets/examples/.photoprism
 @dir /var/db/photoprism/assets/examples
 @dir /var/db/photoprism/assets/facenet
