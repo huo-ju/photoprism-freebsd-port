@@ -5,23 +5,11 @@ The port will compile and install
 
 ## Dependencies
 
-This port depends on science/libtensorflow1
-* [freshports](https://www.freshports.org/science/libtensorflow1/)
-* [Git repo](https://github.com/psa/libtensorflow1-freebsd-port)
-
-You can install it by freebsd ports or build a private copy using poudriere.
-
-## If you need pre-built binaries you can use this repo
-
-AVX2 is required for your CPU.
-
-https://github.com/Gaojianli/photoprism-freebsd-port/releases
-
-## Install using ports
+This port depends on science/py-tensorflow (**2.13.1**)
 
 ### Download and Install
 ```
-git clone https://github.com/huo-ju/photoprism-freebsd-port
+git clone [...]/photoprism-freebsd-port
 cd photoprism-freebsd-port
 make && make install
 ```
@@ -35,12 +23,7 @@ make reinstall clean
 
 ### Poudriere
 
-If you are using poudriere to build the port, you will need to set the
-following in `poudriere.conf`:
-* `ALLOW_NETWORKING_PACKAGES="photoprism"` as the `dep-js` target downloads
-  node packages.
-* `TMPFS_LIMIT` or `MFSSIZE` should be at least `6` as the build is very large.
-* `MAX_MEMORY=16` or more is required for node
+`ALLOW_NETWORKING_PACKAGES="photoprism"` is needed in `/usr/local/etc/poudriere.conf` so build it in poudriere.
 
 ## Add entries to rc.conf
 
