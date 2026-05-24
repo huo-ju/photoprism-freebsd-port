@@ -1,5 +1,5 @@
 PORTNAME=	photoprism
-DISTVERSION=	g260305
+DISTVERSION=	g260523
 CATEGORIES=	www
 
 MAINTAINER=	huoju@devep.net
@@ -34,13 +34,13 @@ EXTRACT_DEPENDS=	\
 
 BUILD_DEPENDS=	${EXTRACT_DEPENDS}
 
-USES=		gmake go:1.25,modules python:3.6+,build gettext-runtime
+USES=		gmake go:1.26,modules python:3.6+,build gettext-runtime
 USE_GNOME+=glib20
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	lapo-luchini
 GH_PROJECT=	photoprism
-GH_TAGNAME=	260305-3b8cb2f7c
+GH_TAGNAME=	260523-c7702f1e3
 
 USE_RC_SUBR=	photoprism
 PHOTOPRISM_DATA_DIR=	/var/db/photoprism
