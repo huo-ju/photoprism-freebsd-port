@@ -8,15 +8,20 @@ WWW=		https://photoprism.app
 
 LICENSE=	AGPLv3
 
+OPTIONS_DEFINE=		TENSORFLOW
+OPTIONS_DEFAULT=	TENSORFLOW
+TENSORFLOW_DESC=	Build with TensorFlow support for machine learning features
+
 RUN_DEPENDS=	ffmpeg:multimedia/ffmpeg \
 	exiftool:graphics/p5-Image-ExifTool \
 	libheif>=1.14.2:graphics/libheif \
 	vips>=8.10:graphics/vips
 
-LIB_DEPENDS=	libtensorflow.so.2:science/py-tensorflow \
-		libgio-2.0.so.0:devel/glib20 \
+LIB_DEPENDS=	libgio-2.0.so.0:devel/glib20 \
 		libgobject-2.0.so.0:devel/glib20 \
 		libglib-2.0.so.0:devel/glib20
+
+TENSORFLOW_LIB_DEPENDS=	libtensorflow.so.2:science/py-tensorflow
 
 EXTRACT_DEPENDS=	\
 	${RUN_DEPENDS} \
@@ -33,9 +38,9 @@ USES=		gmake go:1.24,modules python:3.6+,build gettext-runtime
 USE_GNOME+=glib20
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	photoprism
+GH_ACCOUNT=	lapo-luchini
 GH_PROJECT=	photoprism
-GH_TAGNAME=	260305-fad9d5395
+GH_TAGNAME=	260305-3b8cb2f7c
 
 USE_RC_SUBR=	photoprism
 PHOTOPRISM_DATA_DIR=	/var/db/photoprism
@@ -45,6 +50,12 @@ SUB_FILES+=	pkg-install pkg-message
 BUILD_OS!=uname -s
 BUILD_DATE!=date -u +%y%m%d
 BUILD_ARCH!=uname -m
+
+.include <bsd.port.options.mk>
+
+.if ! ${PORT_OPTIONS:MTENSORFLOW}
+_GO_TAGS=	-tags notf
+.endif
 
 post-extract:
 	@${REINPLACE_CMD} -e 's|sha1sum|shasum|g' ${WRKSRC}/scripts/download-facenet.sh
@@ -81,7 +92,7 @@ do-build:
 		env NODE_ENV=production npm run build ; \
 		)
 	@( cd ${WRKSRC} ; \
-		${SETENV} ${MAKE_ENV} ${GO_ENV} ${GO_CMD} build -v -ldflags \
+		${SETENV} ${MAKE_ENV} ${GO_ENV} ${GO_CMD} build -v ${_GO_TAGS} -ldflags \
 	"-X main.version=${DISTVERSION:C/^...//}-${GH_TAGNAME:C/([0-9a-f]{7}).*/\1/}-${BUILD_OS}-${BUILD_ARCH}-DEBUG-build-${BUILD_DATE}" \
 	-o ${WRKSRC}/photoprism ./cmd/photoprism/photoprism.go ; \
 		)
