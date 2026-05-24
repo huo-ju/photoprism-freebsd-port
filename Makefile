@@ -34,7 +34,7 @@ EXTRACT_DEPENDS=	\
 
 BUILD_DEPENDS=	${EXTRACT_DEPENDS}
 
-USES=		gmake go:1.24,modules python:3.6+,build gettext-runtime
+USES=		gmake go:1.25,modules python:3.6+,build gettext-runtime
 USE_GNOME+=glib20
 
 USE_GITHUB=	yes
